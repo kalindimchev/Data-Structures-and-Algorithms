@@ -23,7 +23,7 @@ http://ai.bgcoder.com/
 
 ## Working in private repositories
 
-The team should work in their own **private GitHub repository** with access granted to the trainers. After teamwork is over, the repository should be open-sourced.
+Each team should work in their own **private GitHub repository** with access granted to the trainers (@NikolayIT, @ivaylokenov, @Minkov, @evlogihr). After teamwork is over, the repository should be open-sourced.
 
 Sadly, the private repositories in GitHub are paid, but the *GitHub Micro plan* costs only *7$ for 5 private repositories* for 1 month. Two teams working on **different games** can split the expenses and pay only 1 account for 1 month and use 2 of the private repositories. For example: if the first team consists of 3 and the second team consists of 2 students (total 5) they can split the expense and each student will pay only 1.4$ (about 2.50 leva)
 
