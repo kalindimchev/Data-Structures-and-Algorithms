@@ -150,6 +150,10 @@ Repository for the Data Structures and Algorithms course
 
 ###   Strings and string algorithms
 <!-- unknown, maybe 3 hours,   -->
+*   Naive search
+*   Rabin-Karp
+*   Hashing
+*   Knuth-Morris-Pratt
 
 ###   State machines
 <!-- unknown, maybe 1.5 hours,   -->
