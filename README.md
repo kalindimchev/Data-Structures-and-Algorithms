@@ -98,10 +98,10 @@ Repository for the Data Structures and Algorithms course
 
 *   Sorting and classifications
 *   Review of the most popular sorting algorithms:
+    *   Bubble sort
     *   Quick sort
     *   Merge sort
     *   Heap sort
-    *   Bubble sort
 *   Shuffling algorithms
 
 ###   Searching Algorithms
@@ -160,5 +160,12 @@ Repository for the Data Structures and Algorithms course
 
 ###   Regular expressions
 <!-- unknown, maybe 1 hour,   -->
+
+###  Computational Geometry
+<!-- unknown -->
+*   Convex hull
+*   Vectors
+    *   Line segment intersection
+*   Closest pair of points
 
 ###   Problem solving skills
