@@ -161,6 +161,11 @@ Repository for the Data Structures and Algorithms course
 ###   Regular expressions
 <!-- unknown, maybe 1 hour,   -->
 
+*   Regular Expression Overview
+*   Regex syntax
+*   Using regular expression in C#
+
+
 ###  Computational Geometry
 <!-- unknown -->
 *   Convex hull
