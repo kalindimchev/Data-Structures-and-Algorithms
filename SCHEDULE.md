@@ -48,6 +48,7 @@
 | 19  | State machines                       | 13:00 | Mon (24-Nov-2015) |
 | 20  | Regular expressions                  | 14:00 | Mon (24-Nov-2015) |
 | 21  | Computational geometry               | 10:30 | Wed (25-Nov-2015) |
+| 21  | Greedy algorithms                    | 10:30 | Wed (25-Nov-2015) |
 | 22  | **Workshop** on strings and geometry | 14:00 | Fri (27-Nov-2015) |
 
 ### Week 6
@@ -57,4 +58,4 @@
 | 23  | **Exam Preparation** | 10:30               | Mon (29-Nov-2015)              |
 | 24  | **Practical Exam**   | 10:30 **not final** | Fri (4-Dec-2015) **not final** |
 
- 
+e
