@@ -28,6 +28,7 @@
 | --- | ------------------------------------------------------------- | ----- | ----------------- |
 | 10  | Sorting algorithms                                            | 10:30 | Mon (9-Nov-2015)  |
 | 11  | Searching algorithms                                          | 12:00 | Mon (9-Nov-2015)  |
+| NEW | Heuristic and genetic algorithms                              | 14:00 | Mon (9-Nov-2015)  | 
 | 12  | Combinatorics                                                 | 10:30 | Web (11-Nov-2015) |
 | 13  | **Workshop** on search and sort algorithms, and combinatorics | 14:00 | Fri (13-Nov-2015) |
 
