@@ -1,3 +1,3 @@
 ## 2. Linear Data Structures
-### [View Presentation online](https://rawgit.com/TelerikAcademy/Databases/master/2.%20Linear-Data-Structures/index.html)
+### [View Presentation online](https://rawgit.com/TelerikAcademy/Data-Structures-and-Algorithms/master/02.%20Linear-Data-Structures/slides/index.html)
 ### Table of Contents
