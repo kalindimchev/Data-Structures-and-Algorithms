@@ -6,9 +6,9 @@
 
 | #   | Title                               | Time  | Date              | Trainer |
 | --- | ----------------------------------- | ----- | :---------------: | ------- |
-| 0   | Course Introduction                 | 13:00 | Mon (26-Oct-2015) | Niki    |
-| 1   | Algorithms Complexity               | 13:30 | Mon (26-Oct-2015) | Niki    |
-| 2   | Linear data structures              | 15:30 | Mon (26-Oct-2015) | Niki    |
+| 0   | Course Introduction                 | 14:00 | Mon (26-Oct-2015) | Niki    |
+| 1   | Algorithms Complexity               | 14:30 | Mon (26-Oct-2015) | Niki    |
+| 2   | Linear data structures              | 16:00 | Mon (26-Oct-2015) | Niki    |
 | 3   | Trees and Tree Traversal Algorithms | 10:30 | Wed (28-Oct-2015) | Cuki    |
 | 4   | Hash tables, maps, and sets         | 13:00 | Wed (28-Oct-2015) | Cuki    |
 | 5   | **Workshop** on data structures     | 10:30 | Fri (30-Oct-2015) | Doncho  |
