@@ -1,7 +1,5 @@
 <!-- section start -->
-
-<!-- attr: {id: 'title', class: 'slide-title', hasScriptWrapper: true} -->
-
+<!-- attr: { id:'title', class:'slide-title', hasScriptWrapper:true } -->
 # Data Structures, Algorithms and Complexity
 ##  Overview of Data Structures and Basic Algorithms. Computational Complexity. Asymptotic Notation
 
