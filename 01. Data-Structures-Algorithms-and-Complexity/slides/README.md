@@ -210,12 +210,11 @@ Example of `pseudocode`
 - For given function `g(n)`, we denote by `O(g(n))` the set of functions that are different than `g(n)` by a constant
 
 <div class="box">
-`O(g(n)) =` {`f(n)`: there exist positive constants `c` and `n`<sub>`0`</sub> such that `f(n) <= c*g(n)` for all `n >= n`<sub>`0`</sub>}
+`O(g(n))` = {`f(n)`: there exist positive constants `c` and `n`<sub>`0`</sub> such that `f(n) <= c*g(n)` for all `n>=n`<sub>`0`</sub>}
 </div>
 - Examples:
   - 3 * n<sup>2</sup> + n/2 + 12 ∈ O(n2)
   - 4*n*log<sub>2</sub>(3*n+1) + 2*n-1 ∈ O(n * log n) 
-
 
 
 <!-- attr: { style:'font-size:0.8em' } -->
@@ -238,7 +237,7 @@ Example of `pseudocode`
 
 <!-- attr: { style:'font-size:0.65em' } -->
 # Time Complexity and Speed
-| Complexity | 10 | 20 | 50 | 100 | 1 000 | 10 000 | 100 000 |
+| Complexity | 10 | 20 | 50 | 100 | 1000 | 10000 | 100000 |
 |------------|----|----|----|-----|-------|--------|---------|
 | O(1) | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s |
 | O(log(n)) | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s |
