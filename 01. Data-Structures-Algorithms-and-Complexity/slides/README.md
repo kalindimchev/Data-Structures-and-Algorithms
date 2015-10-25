@@ -230,9 +230,9 @@ Example of `pseudocode`
 <!-- # Typical Complexities -->
 | Complexity | Notation | Description |
 |------------|----------|-------------|
-| quadratic | O(n2) | Number of operations proportional to the square of the size of the input data, e.g. n = 500 &rarr; 250 000 operations
-| cubic | O(n3) | Number of operations propor-tional to the cube of the size of the input data, e.g. n = 200 &rarr; 8 000 000 operations |
-| exponential| O(2n),<br/>O(kn),<br/> O(n!) | Exponential number of operations, fast growing, e.g. n = 20 &rarr; 1 048 576 operations |
+| quadratic | O(n<sup>2</sup>) | Number of operations proportional to the square of the size of the input data, e.g. n = 500 &rarr; 250 000 operations
+| cubic | O(n<sup>3</sup>) | Number of operations propor-tional to the cube of the size of the input data, e.g. n = 200 &rarr; 8 000 000 operations |
+| exponential| O(2<sup>n</sup>),<br/>O(k<sup>n</sup>),<br/> O(n!) | Exponential number of operations, fast growing, e.g. n = 20 &rarr; 1 048 576 operations |
 
 
 <!-- attr: { style:'font-size:0.65em' } -->
@@ -312,7 +312,7 @@ int FindMaxElement(int[] array)
 }
 ```
 <ul class="fragment">
-  <li>Runs in `O(n)` where n is the size of the array</li>
+  <li>Runs in `O(n)` where `n` is the size of the array</li>
   <li>The number of elementary steps is `~n`</li>
 </ul>
 
@@ -330,7 +330,7 @@ long FindInversions(int[] array)
 }
 ```
 <div class="fragment">
-  <li>Runs in `O(n`<sup>`2`</sup>`)` where n is the size of the array</li>
+  <li>Runs in `O(n`<sup>`2`</sup>`)` where `n` is the size of the array</li>
   <li>The number of elementary steps is `~n*(n+1)/2`</li>
 </div>
 
