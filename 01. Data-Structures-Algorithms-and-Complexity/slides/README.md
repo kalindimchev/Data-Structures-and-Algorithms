@@ -13,19 +13,13 @@
 <!-- attr: { id:'table-of-contents', class:'table-of-contents' } -->
 # Table of Contents
 - Data Structures Overview
-  - Linear Structures
-  - Trees
-  - Hash Tables
-  - Others
+  - Linear Structures, Trees, Hash Tables, Others
 - Algorithms Overview
   - Sorting and Searching
   - Combinatorics
   - Dynamic Programming
   - Graphs
   - Others
-
-<!-- attr: { showInPresentation:true } -->
-<!-- # Table of Contents -->
 - Algorithms Complexity
   - Time and Memory Complexity
   - Mean, Average and Worst Case
