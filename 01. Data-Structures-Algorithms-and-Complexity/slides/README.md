@@ -32,7 +32,7 @@
 <!-- attr: { hasScriptWrapper:true } -->
 # What is a Data Structure?
 <div class="box">
-  "In computer science, a `data structure` is a particular way of storing and organizing data in a computer so that it can be used efficiently."
+  "In computer science, a _data structure_ is a particular way of storing and organizing data in a computer so that it can be used efficiently."
   <div>-- Wikipedia</div>
 </div>
 
@@ -43,10 +43,10 @@
   - Queue of people – `Queue<Person>`
 
 <!-- attr: { style:'font-size:0.9em' } -->
-# Why Are Data Structures So Important?
+# Why are Data Structures so Important?
 - `Data structures` and `algorithms` are the foundation of computer programming
 - Algorithmic thinking, problem solving and data structures are vital for software engineers
-- All .NET developers should know when to use `T[]`, `LinkedList<T>`, `List<T>`, `Stack<T>`, `Queue<T>`, `Dictionary<K,T>`, `HashSet<T>`, `SortedDictionary<K,T>` and `SortedSet<T>`
+  - All .NET developers should know when to use `T[]`, `LinkedList<T>`, `List<T>`, `Stack<T>`, `Queue<T>`, `Dictionary<K,T>`, `HashSet<T>`, `SortedDictionary<K,T>` and `SortedSet<T>`
 - `Computational complexity` is important for algorithm design and efficient programming
 
 # Primitive Types and Collections
@@ -74,7 +74,7 @@
   - Stacks: LIFO (Last In First Out) structure
   - Queues: FIFO (First In First Out) structure
 - Trees and tree-like structures
-  - Binary, ordered search trees, balanced, etc.
+  - Binary, ordered search trees, balanced, B-trees, etc.
 - Dictionaries (maps)
   - Contain pairs (key, value)
   - Hash tables: use hash functions to search/insert
@@ -101,7 +101,7 @@
 <!-- attr: { hasScriptWrapper:true, style:'font-size:0.9em' } -->
 # What is an Algorithm?
 <div class="box">
-  "In mathematics and computer science, an algorithm is a step-by-step procedure for calculations. An algorithm is an effective method expressed as a finite list of well-defined instructions for calculating a function.”
+  "In mathematics and computer science, an _algorithm_ is a step-by-step procedure for calculations. An algorithm is an effective method expressed as a finite list of well-defined instructions for calculating a function.”
   <div>-- Wikipedia</div>
 </div>
 - The term "algorithm" comes from the 
