@@ -243,11 +243,11 @@ Example of `pseudocode`
 | O(log(n)) | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s |
 | O(n) | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s |
 | O(n*log(n)) | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s |
-| O(n2) | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | 2 s | 3-4 min |
-| O(n3) | < 1 s | < 1 s | < 1 s | < 1 s | 20 s | 5 hours | 231 days |
-| O(2n) | < 1 s | < 1 s | 260 days | hangs | hangs | hangs | hangs |
+| O(n<sup>2</sup>) | < 1 s | < 1 s | < 1 s | < 1 s | < 1 s | 2 s | 3-4 min |
+| O(n<sup>3</sup>) | < 1 s | < 1 s | < 1 s | < 1 s | 20 s | 5 hours | 231 days |
+| O(2<sup>n</sup>) | < 1 s | < 1 s | 260 days | hangs | hangs | hangs | hangs |
 | O(n!) | < 1 s | hangs | hangs | hangs | hangs | hangs | hangs |
-| O(nn) | 3-4 min | hangs | hangs | hangs | hangs | hangs | hangs |
+| O(n<sup>n</sup>) | 3-4 min | hangs | hangs | hangs | hangs | hangs | hangs |
 
 
 <!-- attr: { hasScriptWrapper:true } -->
