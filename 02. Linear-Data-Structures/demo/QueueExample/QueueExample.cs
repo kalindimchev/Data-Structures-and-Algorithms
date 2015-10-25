@@ -1,22 +1,25 @@
-using System;
-using System.Collections.Generic;
-
-class QueueExample
+namespace QueueExample
 {
-	static void Main()
-	{
-		Queue<string> queue = new Queue<string>();
+    using System;
+    using System.Collections.Generic;
 
-        queue.Enqueue("Message One");
-		queue.Enqueue("Message Two");
-		queue.Enqueue("Message Three");
-		queue.Enqueue("Message Four");
-		queue.Enqueue("Message Five");
-		
-        while (queue.Count > 0)
-		{
-			string message = queue.Dequeue();
-			Console.WriteLine(message);
-		}
-	}
+    public static class QueueExample
+    {
+        public static void Main()
+        {
+            var queue = new Queue<string>();
+
+            queue.Enqueue("Message One");
+            queue.Enqueue("Message Two");
+            queue.Enqueue("Message Three");
+            queue.Enqueue("Message Four");
+            queue.Enqueue("Message Five");
+
+            while (queue.Count > 0)
+            {
+                var message = queue.Dequeue();
+                Console.WriteLine(message);
+            }
+        }
+    }
 }

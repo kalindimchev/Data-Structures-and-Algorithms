@@ -55,7 +55,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sequence.cs" />
+    <Compile Include="QueueExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

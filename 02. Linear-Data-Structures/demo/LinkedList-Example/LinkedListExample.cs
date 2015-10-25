@@ -1,17 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-
-class LinkedListExample
+﻿namespace LinkedList_Example
 {
-    static void Main()
-    {
-        LinkedList<string> list = new LinkedList<string>();
-        list.AddFirst("First");
-        list.AddLast("Last");
-        list.AddAfter(list.First, "After First");
-        list.AddBefore(list.Last, "Before Last");
+    using System;
+    using System.Collections.Generic;
 
-        Console.WriteLine(String.Join(", ", list));
-        // Result: First, After First, Before Last, Last
+    public static class LinkedListExample
+    {
+        public static void Main()
+        {
+            var linkedList = new LinkedList<string>();
+            linkedList.AddFirst("First");
+            linkedList.AddLast("Last");
+            linkedList.AddAfter(linkedList.First, "After First");
+            linkedList.AddBefore(linkedList.Last, "Before Last");
+
+            Console.WriteLine(string.Join(", ", linkedList));
+
+            // Result: First, After First, Before Last, Last
+        }
     }
 }

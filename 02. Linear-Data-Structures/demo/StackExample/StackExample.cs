@@ -1,22 +1,26 @@
-using System;
-using System.Collections.Generic;
-
-class StackExample
+namespace StackExample
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+
+    public static class StackExample
     {
-        Stack<string> stack = new Stack<string>();
-		
-        stack.Push("1. Ivan");
-        stack.Push("2. Nikolay");
-        stack.Push("3. Maria");
-        stack.Push("4. George");
-		
-        Console.WriteLine("Top = {0}", stack.Peek());
-        while (stack.Count > 0)
+        public static void Main()
         {
-            string personName = stack.Pop();
-            Console.WriteLine(personName);
+            var stack = new Stack<string>();
+
+            stack.Push("1. Nikolay");
+            stack.Push("2. Ivo");
+            stack.Push("3. Doncho");
+            stack.Push("4. Cuki");
+            stack.Push("5. Evlogi");
+
+            Console.WriteLine("Top = {0}", stack.Peek());
+            while (stack.Count > 0)
+            {
+                var personName = stack.Pop();
+                Console.WriteLine(personName);
+            }
         }
     }
 }

@@ -1,38 +1,44 @@
-using System;
-using System.Collections.Generic;
-
-class PrimesInInterval
+namespace PrimesInInterval
 {
-    static List<int> GetPrimes(int start, int end)
-    {
-        List<int> primesList = new List<int>();
+    using System;
+    using System.Collections.Generic;
 
-        for (int num = start; num <= end; num++)
-        {	
-            bool prime = true;
-            for (int div = 2; div <= Math.Sqrt(num); div++)
+    public static class PrimesInInterval
+    {
+        public static void Main()
+        {
+            var primes = GetPrimes(200, 300);
+            foreach (int p in primes)
             {
-                if (num % div == 0)
+                Console.Write("{0} ", p);
+            }
+
+            Console.WriteLine();
+        }
+
+        private static List<int> GetPrimes(int start, int end)
+        {
+            var primesList = new List<int>();
+
+            for (int num = start; num <= end; num++)
+            {
+                bool prime = true;
+                for (int div = 2; div <= Math.Sqrt(num); div++)
                 {
-                    prime = false;
-                    break;
+                    if (num % div == 0)
+                    {
+                        prime = false;
+                        break;
+                    }
+                }
+
+                if (prime)
+                {
+                    primesList.Add(num);
                 }
             }
-            if (prime)
-            {
-                primesList.Add(num);
-            }
-        }
-        return primesList;
-    }
 
-    static void Main()
-    {
-        List<int> primes = GetPrimes(200, 300);
-        foreach (int p in primes)
-        {
-            Console.Write("{0} ", p);
+            return primesList;
         }
-        Console.WriteLine();
     }
 }

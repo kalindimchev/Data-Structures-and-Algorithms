@@ -1,21 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-
-class ListSimpleExample
+﻿namespace List_Simple_Example
 {
-    static void Main()
+    using System;
+    using System.Collections.Generic;
+
+    public static class ListSimpleExample
     {
-        List<string> list = new List<string>() { "C#", "Java" };
-        list.Add("SQL");
-        list.Add("Python");
-        foreach (string item in list)
+        public static void Main()
         {
-            Console.WriteLine(item);
+            var list = new List<string> { "C#", "Java" };
+            list.Add("SQL");
+            list.Add("Python");
+            foreach (string item in list)
+            {
+                Console.WriteLine(item);
+            }
+
+            // Result:
+            //   C#
+            //   Java
+            //   SQL
+            //   Python
         }
-        // Result:
-        //   C#
-        //   Java
-        //   SQL
-        //   Python
     }
 }
