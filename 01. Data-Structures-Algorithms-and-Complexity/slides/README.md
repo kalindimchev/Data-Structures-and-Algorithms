@@ -19,7 +19,6 @@
   - Combinatorics
   - Dynamic Programming
   - Graphs
-  - Others
 - Algorithms Complexity
   - Time and Memory Complexity
   - Mean, Average and Worst Case
