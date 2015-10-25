@@ -213,7 +213,7 @@ Example of `pseudocode`
 `O(g(n))` = {`f(n)`: there exist positive constants `c` and `n`<sub>`0`</sub> such that `f(n) <= c*g(n)` for all `n>=n`<sub>`0`</sub>}
 </div>
 - Examples:
-  - 3 * n<sup>2</sup> + n/2 + 12 ∈ O(n2)
+  - 3 * n<sup>2</sup> + n/2 + 12 ∈ O(n<sup>2</sup>)
   - 4*n*log<sub>2</sub>(3*n+1) + 2*n-1 ∈ O(n * log n) 
 
 
@@ -349,7 +349,7 @@ decimal Sum3(int n)
 ```
 <div class="fragment">
   <li>Runs in cubic time `O(n`<sup>`3`</sup>`)`</li>
-  <li>The number of elementary steps is `~n`<sup>`2`</sup>``</li>
+  <li>The number of elementary steps is `~n`<sup>`3`</sup></li>
 </div>
 
 
@@ -403,8 +403,8 @@ decimal Calculation(int n)
 }
 ```
 <div class="fragment">
-  <li>Runs in exponential time `O(2<sup>n</sup>)`</li>
-  <li>The number of elementary steps is `~2`<sup>`n`</sup>``</li>
+  <li>Runs in exponential time `O(2`<sup>`n`</sup>`)`</li>
+  <li>The number of elementary steps is `~2`<sup>`n`</sup></li>
 </div>
 
 
