@@ -268,7 +268,7 @@ Example of `pseudocode`
   - Algorithm B makes: `n*n/2` steps &rarr; `O(n`<sup>`2`</sup>`)`
   - For `n < 200` the algorithm B is faster
 - Real-world example:
-  - Insertion sort is faster than quicksort for n < 9
+  - Insertion sort is faster than quicksort for n <= 16
 
 <!-- attr: { hasScriptWrapper:true, style:'font-size:1em' } -->
 # Polynomial Algorithms
@@ -279,8 +279,8 @@ Example of `pseudocode`
 </div>
 
 - Examples:
-  - Polynomial-time: log n, 2n, 3n3 + 4n, 2 * n log n
-  - Non polynomial-time :  2n, 3n, nk, n!
+  - Polynomial-time: log(n), 2<sup>n</sup>, 3n<sup>3</sup> + 4n, 2 * n log(n)
+  - Non polynomial-time :  2<sup>n</sup>, 3<sup>n</sup>, n<sup>k</sup>, n!
   - Non-polynomial algorithms hang for large input data sets
 
 
@@ -330,7 +330,7 @@ long FindInversions(int[] array)
 }
 ```
 <div class="fragment">
-  <li>Runs in `O(n2)` where n is the size of the array</li>
+  <li>Runs in `O(n`<sup>`2`</sup>`)` where n is the size of the array</li>
   <li>The number of elementary steps is `~n*(n+1)/2`</li>
 </div>
 
@@ -348,8 +348,8 @@ decimal Sum3(int n)
 }
 ```
 <div class="fragment">
-  <li>Runs in cubic time `O(n3)`</li>
-  <li>The number of elementary steps is `~n3`</li>
+  <li>Runs in cubic time `O(n`<sup>`3`</sup>`)`</li>
+  <li>The number of elementary steps is `~n`<sup>`2`</sup>``</li>
 </div>
 
 
@@ -403,8 +403,8 @@ decimal Calculation(int n)
 }
 ```
 <div class="fragment">
-  <li>Runs in exponential time `O(2n)`</li>
-  <li>The number of elementary steps is `~2n`</li>
+  <li>Runs in exponential time `O(2<sup>n</sup>)`</li>
+  <li>The number of elementary steps is `~2`<sup>`n`</sup>``</li>
 </div>
 
 
@@ -447,12 +447,12 @@ decimal Fibonacci(int n)
 <!-- attr: { id:'summary', style:'font-size:1em' } -->
 # Summary
 - Data structures organize data for efficient use
-- ADT describe a set of operations
-- Collections hold a group of elements
+  - ADT describe a set of operations
+  - Collections hold a group of elements
 - Algorithms are sequences of steps for performing or calculating something
 - Algorithm complexity is rough estimation of the number of steps performed by given computation
-- Complexity can be logarithmic, linear, n log n, square, cubic, exponential, etc.
-- Allows to estimating the speed of given code before its execution  
+  - Complexity can be logarithmic, linear, n log n, square, cubic, exponential, etc.
+  - Allows to estimating the speed of given code before its execution  
 
 <!-- section start -->
 <!-- attr: { id:'questions', class:'slide-section', showInPresentation:true } -->
