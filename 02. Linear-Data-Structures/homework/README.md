@@ -43,7 +43,7 @@
   - Using the `Queue<T>` class write a program to print its first 50 members for given N.
   - Example: N=2 &rarr; 2, 3, 5, 4, 4, 7, 5, 6, 11, 7, 5, 9, 6, ...
 
-10. *We are given numbers N and M and the following operations:
+10. We are given numbers N and M and the following operations:
   a) N = N+1
   b) N = N+2
   c) N = N*2
