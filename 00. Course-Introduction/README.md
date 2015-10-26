@@ -1,3 +1,3 @@
 ## 0. Course Intro
-### [View Presentation online](https://rawgit.com/TelerikAcademy/Databases/master/0.%20Course-Intro/index.html)
+### [View Presentation online](https://rawgit.com/TelerikAcademy/Data-Structures-and-Algorithms/master/00.%20Course-Introduction/slides/index.html#/title)
 ### Table of Contents
