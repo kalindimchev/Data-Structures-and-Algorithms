@@ -217,7 +217,7 @@
 	-	Discuss the course exercises with your colleagues
 	-	Find solutions for the exercises
 	-	Share source code / discuss ideas
--	The databases official [web site](http://academy.telerik.com/student-courses/programming/data-structures-algorithms)
+-	The course official [web site](http://academy.telerik.com/student-courses/programming/data-structures-algorithms)
 
 # Telerik Integrated Learning System (TILS)
 -	The Telerik Integrated Learning System ([TILS](http://www.telerikacademy.com))
@@ -230,7 +230,7 @@
 
 # Required Software
 -	Software needed for this course:
-  -	Microsoft Windows (XP / Win7 / Win8)
+  -	Microsoft Windows (Win8.1 / Win10)
   - Microsoft **Visual Studio 2015**
   - .NET Framework 4.5 (included in Visual Studio)
   - Visual Studio 2013 is also OK
@@ -239,4 +239,4 @@
 <!-- attr: { id:'questions', class:'slide-section' } -->
 # Questions
 ## Data Structures and Algorithms
-[link to the forum]()
+[link to the forum](http://telerikacademy.com/Forum/Category/15/data-structures-algorithms)
