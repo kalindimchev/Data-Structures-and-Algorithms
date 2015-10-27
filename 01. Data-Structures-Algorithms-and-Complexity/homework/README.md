@@ -1,7 +1,8 @@
 ## Data Structures, Algorithms and Complexity
 ### _Homework_
 
-1. What is the expected running time of the following C# code? Explain why.
+1. What is the expected running time of the following C# code?
+  - Explain why using Markdown.
   - Assume the array's size is `n`.
 
   ```cs
@@ -22,7 +23,7 @@
   ```
 
 2. What is the expected running time of the following C# code?
-  - Explain why.
+  - Explain why using Markdown.
   - Assume the input matrix has size of n * m.
 
   ```cs
@@ -39,8 +40,8 @@
   ```
 
 3. (*) What is the expected running time of the following C# code?
-  - Explain why.
-  - Assume the input matrix has size of n * m.
+  - Explain why using Markdown.
+  - Assume the input matrix has size of `n * m`.
 
   ```cs
   long CalcSum(int[,] matrix, int row)
