@@ -150,7 +150,7 @@ Example of `pseudocode`
 <!-- section start -->
 <!-- attr: { id:'algorithm-complexity', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'font-size:1em' } -->
 # Algorithm Complexity
-## Asymtotic Notation ##
+## Asymptotic Notation ##
 
 # Algorithm Analysis
 - Why we should analyze algorithms?
@@ -176,9 +176,9 @@ Example of `pseudocode`
 - `Worst-case`
   - An upper bound on the running time for any input of given size
 - `Average-case`
-  - Assume all inputs of a given size areequally likely
+  - Assume all inputs of a given size are equally likely
 - `Best-case`
-  - The lower bound on the running time(the optimal case)
+  - The lower bound on the running time (the optimal case)
 
 <!-- attr: { hasScriptWrapper:true } -->
 # Time Complexity – Example
