@@ -279,7 +279,7 @@ Example of `pseudocode`
 </div>
 
 - Examples:
-  - Polynomial-time: log(n), 2<sup>n</sup>, 3n<sup>3</sup> + 4n, 2 * n log(n)
+  - Polynomial-time: log(n), n<sup>2</sup>, 3n<sup>3</sup> + 4n, 2 * n log(n)
   - Non polynomial-time :  2<sup>n</sup>, 3<sup>n</sup>, n<sup>k</sup>, n!
   - Non-polynomial algorithms hang for large input data sets
 
