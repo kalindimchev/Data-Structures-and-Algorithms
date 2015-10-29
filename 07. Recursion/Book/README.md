@@ -251,7 +251,7 @@ If we are looking for a recursive solution to the problem, the first problem we 
 
 Notice that, if we have calculated the answer for N = 2, then the answer for N = 3 can be obtained if we put on the first position each of the values of K (in this case from 1 to 3), and on the other two positions we put each of the couples of numbers, produced for N = 2. We can check that this rule applies for numbers greater than 3.
 
-![](./media/image1.emf)
+![](./media/image1.png)
 
 This way we have obtained the following dependence – starting from the first position, we put on the current position each of the values from **1** to **K** and continue **recursively** with the next position. This goes on until we reach position N, after which we print the obtained result (**bottom of the recursion**). Here is how the method looks implemented in C\#:
 
@@ -294,118 +294,73 @@ Here is a complete implementation of the **recursive nested loops** solution:
 
 | **RecursiveNestedLoops.cs**                                    |
 |----------------------------------------------------------------|
-| using System;                                                  
-                                                                 
- class RecursiveNestedLoops                                      
-                                                                 
- {                                                               
-                                                                 
- static int numberOfLoops;                                       
-                                                                 
- static int numberOfIterations;                                  
-                                                                 
- static int\[\] loops;                                           
-                                                                 
- static void Main()                                              
-                                                                 
- {                                                               
-                                                                 
- Console.Write("N = ");                                          
-                                                                 
- numberOfLoops = int.Parse(Console.ReadLine());                  
-                                                                 
- Console.Write("K = ");                                          
-                                                                 
- numberOfIterations = int.Parse(Console.ReadLine());             
-                                                                 
- loops = new int\[numberOfLoops\];                               
-                                                                 
- NestedLoops(0);                                                 
-                                                                 
- }                                                               
-                                                                 
- static void NestedLoops(int currentLoop)                        
-                                                                 
- {                                                               
-                                                                 
- if (currentLoop == numberOfLoops)                               
-                                                                 
- {                                                               
-                                                                 
- PrintLoops();                                                   
-                                                                 
- return;                                                         
-                                                                 
- }                                                               
-                                                                 
- for (int counter=1; counter&lt;=numberOfIterations; counter++)  
-                                                                 
- {                                                               
-                                                                 
- loops\[currentLoop\] = counter;                                 
-                                                                 
- NestedLoops(currentLoop + 1);                                   
-                                                                 
- }                                                               
-                                                                 
- }                                                               
-                                                                 
- static void PrintLoops()                                        
-                                                                 
- {                                                               
-                                                                 
- for (int i = 0; i &lt; numberOfLoops; i++)                      
-                                                                 
- {                                                               
-                                                                 
- Console.Write("{0} ", loops\[i\]);                              
-                                                                 
- }                                                               
-                                                                 
- Console.WriteLine();                                            
-                                                                 
- }                                                               
-                                                                 
- }                                                               |
+
+```cs
+using System;
+
+class RecursiveNestedLoops
+{
+    static int numberOfLoops;
+
+    static int numberOfIterations;
+
+    static int[] loops;
+
+    static void Main()
+    {
+        Console.Write("N = ");
+        numberOfLoops = int.Parse(Console.ReadLine());
+        Console.Write("K = ");
+        numberOfIterations = int.Parse(Console.ReadLine());
+        loops = new int[numberOfLoops];
+        NestedLoops(0);
+    }
+
+    static void NestedLoops(int currentLoop)
+    {
+        if (currentLoop == numberOfLoops)
+        {
+            PrintLoops();
+            return;
+        }
+        for (int counter = 1; counter <= numberOfIterations; counter++)
+        {
+            loops[currentLoop] = counter;
+            NestedLoops(currentLoop + 1);
+        }
+    }
+
+    static void PrintLoops()
+    {
+        for (int i = 0; i < numberOfLoops; i++)
+        {
+            Console.Write("{0} ", loops[i]);
+        }
+        Console.WriteLine();
+    }
+}
+```
 
 If we run the application and enter for **N** and **K** respectively 2 and 4 as follows, we are going to obtain the following result:
 
-| N = 2 
-        
- K = 4  
-        
- 1 1    
-        
- 1 2    
-        
- 1 3    
-        
- 1 4    
-        
- 2 1    
-        
- 2 2    
-        
- 2 3    
-        
- 2 4    
-        
- 3 1    
-        
- 3 2    
-        
- 3 3    
-        
- 3 4    
-        
- 4 1    
-        
- 4 2    
-        
- 4 3    
-        
- 4 4    |
-|-------|
+>N = 2 
+>K = 4  
+>1 1    
+>1 2    
+>1 3    
+>1 4    
+>2 1    
+>2 2    
+>2 3    
+>2 4    
+>3 1    
+>3 2    
+>3 3    
+>3 4    
+>4 1    
+>4 2    
+>4 3    
+>4 4
 
 In the **Main()** method we enter values for N and K, create an array in which we are going to keep the sequence of values, after which we call the method **NestedLoops(…)**, starting from the first position.
 
