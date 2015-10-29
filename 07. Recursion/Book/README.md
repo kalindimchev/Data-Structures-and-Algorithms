@@ -30,22 +30,17 @@ Each element of the sequence is formed by the sum of the previous two elements. 
 
 Proceeding directly from the definition, we can implement the following **recursive method for finding the n<sup>th</sup> Fibonacci number**:
 
-| static long Fib(int n)          
-                                  
- {                                
-                                  
- if (n &lt;= 2)                   
-                                  
- {                                
-                                  
- return 1;                        
-                                  
- }                                
-                                  
- return Fib(n - 1) + Fib(n - 2);  
-                                  
- }                                |
-|---------------------------------|
+```cs
+static long Fib(int n)          
+{                                
+	if (n &lt;= 2)                   
+	{                                
+		return 1;                        
+	}                                
+	
+	return Fib(n - 1) + Fib(n - 2);  
+}
+```
 
 This example shows how simple and natural the implementation of a solution can be when using recursion.
 
