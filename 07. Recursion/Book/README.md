@@ -33,7 +33,7 @@ Proceeding directly from the definition, we can implement the following **recurs
 ```cs
 static long Fib(int n)          
 {                                
-	if (n &lt;= 2)                   
+	if (n <= 2)                   
 	{                                
 		return 1;                        
 	}                                
@@ -94,23 +94,21 @@ When creating our solution, it is much more convenient to use the corresponding 
 
 The presence of recurrent dependence is not always obvious. Sometimes we have to find it ourselves. In our case we can do this by analyzing the problem and calculating the values of the factorial for the first few integers.
 
-| 0! = 1                
-                        
- 1! = 1 = 1.1 = 1.0!    
-                        
- 2! = 2.1 = 2.1!        
-                        
- 3! = 3.2.1 = 3.2!      
-                        
- 4! = 4.3.2.1 = 4.3!    
-                        
- 5! = 5.4.3.2.1 = 5.4!  |
-|-----------------------|
+>0! = 1                
+>                       
+>1! = 1 = 1.1 = 1.0!    
+>                       
+>2! = 2.1 = 2.1!        
+>                       
+>3! = 3.2.1 = 3.2!      
+>                       
+>4! = 4.3.2.1 = 4.3!    
+>                       
+>5! = 5.4.3.2.1 = 5.4!
 
 From here you can easily see the recurrent dependability:
 
-| n! = n.(n-1)! |
-|---------------|
+>n! = n.(n-1)!
 
 ### Algorithm Implementation
 
@@ -120,91 +118,59 @@ In the other cases we solve the problem for n-1 and multiply the result by n. Th
 
 Once we have these substantial conditions we can write a method, which computes factorial:
 
-| static decimal Factorial(int n)            
-                                             
- {                                           
-                                             
- // The bottom of the recursion              
-                                             
- if (n == 0)                                 
-                                             
- {                                           
-                                             
- return 1;                                   
-                                             
- }                                           
-                                             
- // Recursive call: the method calls itself  
-                                             
- else                                        
-                                             
- {                                           
-                                             
- return n \* Factorial(n - 1);               
-                                             
- }                                           
-                                             
- }                                           |
-|--------------------------------------------|
+```cs
+static decimal Factorial(int n)            
+{                                           
+	// The bottom of the recursion
+	if (n == 0)
+	{
+		return 1;
+	}                                           
+	// Recursive call: the method calls itself  
+	else                                        
+	{                                           
+		return n * Factorial(n - 1);
+	}                                           
+}
+```
 
 By using this method we can create an application, which reads an integer from the console computes its factorial and then prints the obtained value:
 
 | **RecursiveFactorial.cs**                      |
 |------------------------------------------------|
-| using System;                                  
-                                                 
- class RecursiveFactorial                        
-                                                 
- {                                               
-                                                 
- static void Main()                              
-                                                 
- {                                               
-                                                 
- Console.Write("n = ");                          
-                                                 
- int n = int.Parse(Console.ReadLine());          
-                                                 
- decimal factorial = Factorial(n);               
-                                                 
- Console.WriteLine("{0}! = {1}", n, factorial);  
-                                                 
- }                                               
-                                                 
- static decimal Factorial(int n)                 
-                                                 
- {                                               
-                                                 
- // The bottom of the recursion                  
-                                                 
- if (n == 0)                                     
-                                                 
- {                                               
-                                                 
- return 1;                                       
-                                                 
- }                                               
-                                                 
- // Recursive call: the method calls itself      
-                                                 
- else                                            
-                                                 
- {                                               
-                                                 
- return n \* Factorial(n - 1);                   
-                                                 
- }                                               
-                                                 
- }                                               
-                                                 
- }                                               |
+
+```cs
+using System;                                  
+class RecursiveFactorial                        
+{                                               
+	static void Main()                              
+	{                                               
+		Console.Write("n = ");
+		int n = int.Parse(Console.ReadLine());
+		decimal factorial = Factorial(n);
+		Console.WriteLine("{0}! = {1}", n, factorial);  
+	}                                               
+	
+	static decimal Factorial(int n)
+	{
+		// The bottom of the recursion
+		if (n == 0)
+		{
+			return 1;
+		}
+		// Recursive call: the method calls itself
+        else
+		{
+			return n \* Factorial(n - 1);
+		}
+	}
+}
+```
 
 Here is what the result of the execution of the application would be like if we enter 5 for n:
 
-| n = 5    
-           
- 5! = 120  |
-|----------|
+>n = 5     
+>5! = 120
 
 Recursion or Iteration?
 -----------------------
@@ -215,24 +181,18 @@ Very often, if we are given a recurrent definition of the problem, the **recurre
 
 In this particular case the implementation of the iterative solution is as short and simple, but is a bit **more efficient**:
 
-| static decimal Factorial(int n) 
-                                  
- {                                
-                                  
- decimal result = 1;              
-                                  
- for (int i = 1; i &lt;= n; i++)  
-                                  
- {                                
-                                  
- result = result \* i;            
-                                  
- }                                
-                                  
- return result;                   
-                                  
- }                                |
-|---------------------------------|
+```cs
+static decimal Factorial(int n)
+{                                
+	decimal result = 1;
+    for (int i = 1; i <= n; i++)  
+	{
+		result = result \* i;
+	}
+	
+	return result;
+}
+```
 
 We are going to consider the advantages and disadvantages of using recursion and iteration [*later in this chapter*](#_When_Should_We).
 
@@ -247,41 +207,39 @@ Very often we have to write **nested loops**. It is very easy when they are two,
 
 Write a program that simulates the execution of **N nested loops** from **1** to **K**, where **N** and **K** are entered by the user. The result of the performance of the program should be equivalent to the execution of following fragment:
 
-| for (a1 = 1; a1 &lt;= K; a1++)         
-                                         
- for (a2 = 1; a2 &lt;= K; a2++)          
-                                         
- for (a3 = 1; a3 &lt;= K; a3++)          
-                                         
- …                                       
-                                         
- for (aN = 1; aN &lt;= K; aN++)          
-                                         
- Console.WriteLine("{0} {1} {2} … {N}",  
-                                         
- a1, a2, a3, …, aN);                     |
-|----------------------------------------|
+>for (a1 = 1; a1 &lt;= K; a1++)         
+>                                        
+>for (a2 = 1; a2 &lt;= K; a2++)          
+>                                        
+>for (a3 = 1; a3 &lt;= K; a3++)          
+>                                        
+>…                                       
+>                                        
+>for (aN = 1; aN &lt;= K; aN++)          
+>                                        
+>Console.WriteLine("{0} {1} {2} … {N}",  
+>                                        
+>a1, a2, a3, …, aN);
 
 For example, when N = 2 and K = 3 (which is equivalent to 2 nested loops from 1 to 3) and when N = 3 and K = 3, the results would be as follows:
 
-| 1 1 1 1 1                     
-                                
- 1 2 1 1 2                      
-                                
- 1 3 1 1 3                      
-                                
- N = 2 2 1 N = 3 1 2 1          
-                                
- K = 3 -&gt; 2 2 K = 3 -&gt; …  
-                                
- 2 3 3 2 3                      
-                                
- 3 1 3 3 1                      
-                                
- 3 2 3 3 2                      
-                                
- 3 3 3 3 3                      |
-|-------------------------------|
+>1 1 1 1 1                     
+>                               
+>1 2 1 1 2                      
+>                               
+>1 3 1 1 3                      
+>                               
+>N = 2 2 1 N = 3 1 2 1          
+>                               
+>K = 3 -&gt; 2 2 K = 3 -&gt; …  
+>                               
+>2 3 3 2 3                      
+>                               
+>3 1 3 3 1                      
+>                               
+>3 2 3 3 2                      
+>                               
+>3 3 3 3 3
 
 The algorithm for solving this problem is not as obvious as in the previous example. Let’s consider two different solutions – one **recursive**, and one **iterative**.
 
