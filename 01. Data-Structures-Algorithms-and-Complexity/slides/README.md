@@ -150,7 +150,7 @@ Example of `pseudocode`
 <!-- section start -->
 <!-- attr: { id:'algorithm-complexity', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'font-size:1em' } -->
 # Algorithm Complexity
-## Asymtotic Notation ##
+## Asymptotic Notation ##
 
 # Algorithm Analysis
 - Why we should analyze algorithms?
@@ -176,9 +176,9 @@ Example of `pseudocode`
 - `Worst-case`
   - An upper bound on the running time for any input of given size
 - `Average-case`
-  - Assume all inputs of a given size areequally likely
+  - Assume all inputs of a given size are equally likely
 - `Best-case`
-  - The lower bound on the running time(the optimal case)
+  - The lower bound on the running time (the optimal case)
 
 <!-- attr: { hasScriptWrapper:true } -->
 # Time Complexity – Example
@@ -279,7 +279,7 @@ Example of `pseudocode`
 </div>
 
 - Examples:
-  - Polynomial-time: log(n), 2<sup>n</sup>, 3n<sup>3</sup> + 4n, 2 * n log(n)
+  - Polynomial-time: log(n), n<sup>2</sup>, 3n<sup>3</sup> + 4n, 2 * n log(n)
   - Non polynomial-time :  2<sup>n</sup>, 3<sup>n</sup>, n<sup>k</sup>, n!
   - Non-polynomial algorithms hang for large input data sets
 

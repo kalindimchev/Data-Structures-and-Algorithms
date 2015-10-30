@@ -1,3 +1,3 @@
 ## 11. Graphs and Graph Algorithms
-### [View Presentation online](https://rawgit.com/TelerikAcademy/Databases/master/11.%20Graphs-and-Graph-Algorithms/index.html)
+### [View Presentation online](https://rawgit.com/TelerikAcademy/Data-Structures-and-Algorithms/master/11.%20Graphs-and-Graph-Algorithms/slides/index.html)
 ### Table of Contents

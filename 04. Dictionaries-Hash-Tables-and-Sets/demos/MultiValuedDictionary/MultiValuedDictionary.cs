@@ -29,11 +29,11 @@ class MultiValuedDictionary
 
 	static void Main()
 	{
-		AddGrade("Nakov", 6);
-		AddGrade("Nakov", 5);
+		AddGrade("Pesho", 6);
+		AddGrade("Pesho", 5);
 		AddGrade("Maria", 3);
 		AddGrade("Maria", 4);
-		AddGrade("Nakov", 6);
+		AddGrade("Pesho", 6);
 		AddGrade("Maria", 3);
 		AddGrade("Kiril", 4);
 

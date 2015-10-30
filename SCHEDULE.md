@@ -26,10 +26,10 @@
 
 | #   | Title                                                         | Time  | Date              | Trainer |
 | --- | ------------------------------------------------------------- | ----- | :---------------: | ------- |
-| 10  | Sorting algorithms                                            | 10:30 | Mon (9-Nov-2015)  | Doncho  |
-| 11  | Searching algorithms                                          | 12:00 | Mon (9-Nov-2015)  | Doncho  |
-| 12  | Heuristic and genetic algorithms                              | 14:00 | Mon (9-Nov-2015)  | Niki    |
-| 13  | Combinatorics                                                 | 18:00 | Web (11-Nov-2015) | Ivo     |
+| 13  | Combinatorics                                                 | 18:00 | Mon (9-Nov-2015)  | Ivo     |
+| 10  | Sorting algorithms                                            | 10:30 | Wed (11-Nov-2015) | Doncho  |
+| 11  | Searching algorithms                                          | 12:00 | Wed (11-Nov-2015) | Doncho  |
+| 12  | Heuristic and genetic algorithms                              | 14:00 | Wed (11-Nov-2015) | Niki    |
 | 14  | **Workshop** on search and sort algorithms, and combinatorics | 14:00 | Fri (13-Nov-2015) | Cuki    |
 
 ### Week 4

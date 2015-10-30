@@ -1,3 +1,3 @@
-## 7. Recursion
-### [View Presentation online](https://rawgit.com/TelerikAcademy/Databases/master/7.%20Recursion/index.html)
+## 07. Recursion
+### [View Presentation online](https://rawgit.com/TelerikAcademy/Data-Structures-and-Algorithms/master/07.%20Recursion/slides/index.html)
 ### Table of Contents

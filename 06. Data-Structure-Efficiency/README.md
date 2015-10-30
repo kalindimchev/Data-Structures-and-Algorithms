@@ -1,3 +1,3 @@
-## 6. Data Structure Efficiency
-### [View Presentation online](https://rawgit.com/TelerikAcademy/Databases/master/6.%20Data-Structure-Efficiency/index.html)
+## 06. Data Structure Efficiency
+### [View Presentation online](https://rawgit.com/TelerikAcademy/Data-Structures-and-Algorithms/master/06.%20Data-Structure-Efficiency/slides/index.html)
 ### Table of Contents
