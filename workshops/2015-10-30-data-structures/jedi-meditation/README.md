@@ -35,6 +35,12 @@ Joro and Gosho are padawans. They want to have as much time with the Force as th
    *  Print each jedi's name
    *  Different jedi's are separated by a single space
 
+##  Constraints
+
+*  `0 < N < 100 000`
+*  Time: 0.1 seconds
+*  Memory: 16MB 
+
 ##  Examples
 
 ###  Example 1
