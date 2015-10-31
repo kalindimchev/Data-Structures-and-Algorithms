@@ -5,12 +5,14 @@
    
    Write a program to read the tree and find:
    
-   a. the root node
-   b. all leaf nodes
-   c. all middle nodes
-   d. the longest path in the tree
-   e. (*) all paths in the tree with given sum S of their nodes
-   f. (*) all subtrees with given sum S of their nodes
+    <ol type="a">
+       <li>the root node</li>
+       <li>all leaf nodes</li>
+       <li>all middle nodes</li>
+       <li>the longest path in the tree</li>
+       <li>(*) all paths in the tree with given sum `S` of their nodes</li>
+       <li>(*) all subtrees with given sum `S` of their nodes</li>
+    </ol>
 
 2. Write a program to traverse the directory `C:\WINDOWS` and all its subdirectories recursively and to display all files matching the mask `*.exe`. Use the class `System.IO.Directory`.
 
