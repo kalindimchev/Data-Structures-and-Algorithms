@@ -7,6 +7,8 @@
     <p class="signature-initiative">Telerik Software Academy</p>
     <a href = "http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
 </div>
+
+
 <!-- section start -->
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
@@ -18,7 +20,6 @@
   * Harmful Recursion
   * Optimizing Bad Recursion
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # What is Recursion?
@@ -31,7 +32,6 @@
   * Exit criteria (`bottom`)
     * Prevents infinite recursion
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Recursive Factorial – Example
@@ -48,56 +48,51 @@ n! = n x (n–1)! for n >= 0
   * 1! = 1 x 0! = 1 x 1 = 1
   * 0! = 1
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Recursive Factorial – Example
 * Calculating factorial:
   * 0! = 1
   * n! = nx (n-1)!, n>0
+
+```cs
+static decimal Factorial(decimal num)
+{
+    if (num == 0) 
+        return 1;
+    else
+        return num * Factorial(num - 1);
+} 
+```
 * Don't try this at home!
   * Use iteration instead
 
-```cs
-static decimal Factorial(decimal num){    if (num == 0) 
-        return 1;     else
-        return num x Factorial(num - 1); } 
-```
-<div class="fragment balloon">The bottom of the recursion</div>
-<div class="fragment balloon">Recursive call: the method calls itself</div>
+<div class="fragment balloon" style="width:300px; top:51%; left:32%">The bottom of the recursion</div>
+<div class="fragment balloon" style="width:200px; top:66%; left:55%">Recursive call: the method calls itself</div>
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Recursive Factorial
+<!-- # Recursive Factorial -->
 ##  [Demo]()
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating 0/1 Vectors
 * How to generate all 8-bit vectors recursively?
-    * 00000000
-    * 00000001
-    * ...
-    * 01111111
-    * 10000000
-    * ...
-    * 11111110
-    * 11111111
+  * 00000000
+  * 00000001
+  * ...
+  * 01111111
+  * 10000000
+  * ...
+  * 11111110
+  * 11111111
 * How to generate all n-bit vectors?
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.9em' } -->
 # Generating 0/1 Vectors (2)
 * Algorithm `Gen01(n)`: put 0 and 1 at the last position `n` and call `Gen01(n-1)` for the rest:
-* Gen01(6):
-* Gen01(5)
-* Gen01(5)
-* Gen01(5):
-* Gen01(4)
-* Gen01(4)
-* ...
-* Gen01(-1) &rarr; Stop!
+
+<img class="slide-image" src="imgs/generating-01-vectors.png" style="position:initial; width:80%; margin-left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating 0/1 Vectors (3)
@@ -122,54 +117,45 @@ static void Main()
 }
 ```
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Generating 0/1 Vectors
+<!-- # Generating 0/1 Vectors -->
 ##  [Demo]()
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Generating Combinations
-##  Simple Recursive Algorithm
+<!-- # Generating Combinations
+##  Simple Recursive Algorithm -->
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating Combinations
 * Combinations are give the ways to select a subset of larger set of elements
   * Select `k` members from a set of `n` elements
-  * Example: there are 10 ways to select 3 different elements from the set {4, 5, 6, 7, 8}:
-  * (4, 5, 6)	(4, 5, 7)	(4, 5, 8)	(4, 6, 7)	(4, 6, 8)
-  * (4, 7, 8)	(5, 6, 7)	(5, 6, 8)	(5, 7, 8)	(6, 7, 8)
+  * Example: there are 10 ways to select 3 different elements from the set `{4,5,6,7,8}`:
+    * (4, 5, 6)	(4, 5, 7)	(4, 5, 8)	(4, 6, 7)	(4, 6, 8)<br/>(4, 7, 8)	(5, 6, 7)	(5, 6, 8)	(5, 7, 8)	(6, 7, 8)
 * Combinations with and without repetitions can be easily generated with `recursion`
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Generating Combinations (2)
+<!-- # Generating Combinations -->
 * Algorithm `GenCombs(k)`: put the numbers [1..n] at position `k` the and call `GenCombs(k+1)` recursively for the rest of the elements:
-* GenCombs(0):
-* GenCombs(1)
-* ...
-* GenCombs(n) &rarr; Stop!
-<div class="fragment balloon">Put all numbers in range [1..n] at position k</div>
-* GenCombs(1):
-* GenCombs(2)
-<div class="fragment balloon">Put all numbers in range [1..n] at position k</div>
+
+<img class="slide-image" src="imgs/generating-combinations.png" style="position:initial; width:70%; margin-left:15%" />
+
+<div class="fragment balloon" style="width: 270px; top:70%; left:10%">Put all numbers in range [1..n] at position k</div>
+<div class="fragment balloon" style="width: 270px; top:70%; left:60%">Put all numbers in range [1..n] at position k</div>
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Generating Combinations
+<!-- # Generating Combinations -->
 ##  [Demo]()
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Backtracking
 ##  Solving Computational Problemsby Generating All Candidates
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Backtracking
@@ -178,8 +164,8 @@ static void Main()
   * E.g. find all paths from Sofia to Varna
 * How does backtracking work?
   * Usually implemented recursively
-  * At each step we try all perspective possibilities to generate a solution
-* Backtracking has exponential running time!
+  * At each step we try **all perspective possibilities** to generate a solution
+* Backtracking has **exponential running time**!
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # The 8 Queens Problem
@@ -187,7 +173,7 @@ static void Main()
   * So that no two queens attack each other
   * http://en.wikipedia.org/wiki/Eight_queens_puzzle
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+<img class="slide-image" src="imgs/the-8-queens.png" style="position:initial; width:30%; margin-left:35%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Solving The 8 Queens Problem
@@ -210,25 +196,29 @@ static void PutQueens(int count)
 }
 ```
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.95em' } -->
 # Finding All Paths in a Labyrinth
 * We are given a labyrinth
   * Represented as matrix of cells of size M x N
-  * Empty cells are passable, the others (x) are not
+  * Empty cells are passable, the others (*) are not
 * We start from the top left corner and can move in the all 4 directions: left, right, up, down
 * We need to find all paths to the bottom right corner
-<div class="fragment balloon">Start position</div>
-<div class="fragment balloon">End position</div>
 
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Finding All Paths in a Labyrinth (2)
+<div class="fragments balloon" style="top:70%; left:10%">Start position</div>
+<div class="fragments balloon" style="top:90%; left:62%">End position</div>
+
+<img class="slide-image" src="imgs/labyrinth.png" style="width:30%; top:65%; left:30%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Finding All Paths in a Labyrinth -->
 * There are 3 different paths from the top left corner to the bottom right corner:
-* 1)
-* 2)
-* 3)
 
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Finding All Paths in a Labyrinth (3)
+<img class="slide-image" src="imgs/labyrinth1.png" style="width:35%; top:30%; left:0%" />
+<img class="slide-image" src="imgs/labyrinth2.png" style="width:35%; top:30%; right:10%" />
+<img class="slide-image" src="imgs/labyrinth3.png" style="width:35%; top:60%; left:28%" />
+
+<!-- attr: { showInPresentation:true, style:'font-size:0.95em' } -->
+<!-- # Finding All Paths in a Labyrinth -->
 * Suppose we have an algorithm `FindExit(x,y)` that finds and prints all paths to the exit (bottom right corner) starting from position `(x,y)`
 * If `(x,y)` is not passable, no paths are found
 * If `(x,y)` is already visited, no paths are found
@@ -237,12 +227,9 @@ static void PutQueens(int count)
   * Find recursively all paths to the exit from all neighbor cells: `(x-1,y)` ,` (x+1,y)` ,` (x,y+1)` ,` (x,y-1)`
   * Mark position `(x,y)` as free (can be visited again)
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, style:'font-size:0.95em' } -->
 # Find All Paths: Algorithm
 * Representing the labyrinth as matrix of characters (in this example 5 rows and 7 columns):
-  * Spaces ('` `') are passable cells
-  * Asterisks ('`x`') are  not passable cells
-  * The symbol '`e`' is the exit (can occur multiple times)
 
 ```cs
 static char[,] lab = 
@@ -254,9 +241,12 @@ static char[,] lab =
     {' ', ' ', ' ', ' ', ' ', ' ', 'е'},
 };
 ```
+* * Spaces ('` `') are passable cells
+  * Asterisks ('`x`') are  not passable cells
+  * The symbol '`e`' is the exit (can occur multiple times)
 
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Find All Paths: Algorithm (2)
+<!-- attr: { showInPresentation:true, style:'font-size:0.95em' } -->
+<!-- # Find All Paths: Algorithm -->
 
 ```cs
 static void FindExit(int row, int col)
@@ -277,23 +267,26 @@ static void FindExit(int row, int col)
         // The current cell is not free -> can't find a path
         return;
     }
-(example continues)
+// (example continues)
 ```
 
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Find All Paths: Algorithm (3)
+<!-- attr: { showInPresentation:true, style:'font-size:0.95em' } -->
+<!-- # Find All Paths: Algorithm -->
 
 ```cs
     // Temporary mark the current cell as visited
     lab[row, col] = 's';
+
     // Invoke recursion to explore all possible directions
     FindExit(row, col-1); // left
     FindExit(row-1, col); // up
     FindExit(row, col+1); // right
     FindExit(row+1, col); // down
+
     // Mark back the current cell as free
     lab[row, col] = ' ';
 }
+
 static void Main()
 {
     FindExit(0, 0);
@@ -301,10 +294,9 @@ static void Main()
 ```
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Find All Paths in a Labyrinth
+<!-- # Find All Paths in a Labyrinth -->
 ##  [Demo]()
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Find All Paths and Print Them
@@ -318,8 +310,8 @@ static void Main()
 static List<char> path = new List<char>();
 ```
 
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Find All Paths and Print Them (2)
+<!-- attr: { showInPresentation:true, style:'font-size:0.95em' } -->
+<!-- # Find All Paths and Print Them -->
 
 ```cs
 static void FindPathToExit(int row, int col, char direction)
@@ -339,27 +331,25 @@ static void FindPathToExit(int row, int col, char direction)
     FindPathToExit(row + 1, col, 'D'); // down
     ...
     // Remove the last direction from the path
-    path.RemoveAt(path.Count-1);
+    path.RemoveAt(path.Count - 1);
 }
 ```
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Find and Print All Paths in a Labyrinth
+<!-- # Find and Print All Paths in a Labyrinth -->
 ##  [Demo]()
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Recursion or Iteration?
 ##  When to Use and When to Avoid Recursion?
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, style:'font-size:0.95em' } -->
 # Recursion Can be Harmful!
 * When used incorrectly the recursion could take too much memory and computing power
-* Example:
+  * _Example_:
 
 ```cs
 static decimal Fibonacci(int n)
@@ -369,6 +359,7 @@ static decimal Fibonacci(int n)
     else
         return Fibonacci(n - 1) + Fibonacci(n - 2);
 }
+
 static void Main()
 {
     Console.WriteLine(Fibonacci(10)); // 89
@@ -377,19 +368,19 @@ static void Main()
 ```
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Harmful Recursion
+<!-- # Harmful Recursion -->
 ##  [Demo]()
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.95em' } -->
 # How the Recursive Fibonacci Calculation Works?
-* fib(n) makes about fib(n) recursive calls
+
+<img class="slide-image" src="imgs/recursive-fibonacci.png" style="position:initial; width:80%; margin-left:5%" />
+* `fib(n)` makes about `fib(n)` recursive calls
 * The same value is calculated many, many times!
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, style:'font-size:0.95em' } -->
 # Fast Recursive Fibonacci
 * Each Fibonacci sequence member can be remembered once it is calculated
   * Can be returned directly when needed again
@@ -411,99 +402,29 @@ static decimal Fibonacci(int n)
 ```
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Fast Recursive Fibonacci
+<!-- # Fast Recursive Fibonacci -->
 ##  [Demo]()
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # When to Use Recursion?
-* Avoid recursion when an obvious iterative algorithm exists
-  * Examples: factorial, Fibonacci numbers
-* Use recursion for combinatorial algorithm where at each step you need to recursively explore more than one possible continuation
-  * Examples: permutations, all paths in labyrinth
-  * If you have only one recursive call in the body of a recursive method, it can directly become iterative (like calculating factorial)
+* **Avoid recursion** when an obvious iterative algorithm exists
+  * _Examples_: **factorial**, **Fibonacci numbers**
+* Use recursion for **combinatorial algorithm** where at each step you need to recursively explore **more than one possible continuation**
+  * _Examples_: **permutations**, all **paths in labyrinth**
+  * If you have only **one recursive call** in the body of a recursive method, it can directly become iterative (like calculating factorial)
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Summary
 * Recursion means to call a method from itself
-  * It should always have a bottom at which recursive calls stop
+  * It should always have a **bottom** at which recursive calls stop
 * Very powerful technique for implementing combinatorial algorithms
-  * Examples: generating combinatorial configurations like permutations, combinations, variations, etc.
+  * _Examples_: generating combinatorial configurations like **permutations**, **combinations**, **variations**, etc.
 * Recursion can be harmful when not used correctly
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Recursion
-* http://academy.telerik.com
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Exercises
-* Write a recursive program that simulates the execution of `n nested loops `from 1 to n. Examples:
-  *                            1 1 1
-  *                            1 1 2
-  *                            1 1 3
-  *          1 1               1 2 1
-  * n=2  ->  1 2      n=3  ->  ...
-  *          2 1               3 2 3
-  *          2 2               3 3 1
-  *                            3 3 2
-  *                            3 3 3
-
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Exercises (2)
-* Write a recursive program for generating and printing all the `combinations with duplicates `of k elements from n-element set. Example:
-  * 	n=3, k=2 &rarr; (1 1), (1 2), (1 3), (2 2), (2 3), (3 3)
-* Modify the previous program to `skip duplicates`:
-    * n=4, k=2 &rarr; (1 2), (1 3), (1 4), (2 3), (2 4), (3 4)
-* Write a recursive program for generating and printing all `permutations` of the numbers 1, 2, ..., n for given integer number n. Example:
-* 	n=3 &rarr; {1, 2, 3}, {1, 3, 2}, {2, 1, 3},					{2, 3, 1}, {3, 1, 2},{3, 2, 1}
-
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Exercises (3)
-* Write a recursive program for generating and printing all ordered k-element subsets from n-element set (`variations Vkn`).
-  * 	Example: n=3, k=2, set = {hi, a, b} =>
-  * 	(hi hi), (hi a), (hi b), (a hi), (a a), (a b), (b hi), (b a), (b b)
-* Write a program for generating and printing `all subsets of k strings` from given set of strings.
-  * 	Example: s = {test, rock, fun}, k=2
-  * 	(test rock),  (test fun),  (rock fun)
-
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Exercises (4)
-* We are given a matrix of passable and non-passable cells. Write a recursive program for finding all paths between two cells in the matrix.
-* Modify the above program to check whether a path exists between two cells without finding all possible paths. Test it over an empty 100 x 100 matrix.
-* Write a recursive program to find the largest connected area of adjacent empty cells in a matrix.
-* x We are given a matrix of passable and non-passable cells. Write a recursive program for finding all areas of passable cells in the matrix.
-
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Exercises (5)
-* x Write a program to generate all `permutations with repetitions `of given multi-set. For example the multi-set {1, 3, 5, 5} has the following 12 unique permutations:
-    * { 1, 3, 5, 5 }	{ 1, 5, 3, 5 }
-    * { 1, 5, 5, 3 }	{ 3, 1, 5, 5 }
-    * { 3, 5, 1, 5 }	{ 3, 5, 5, 1 }
-    * { 5, 1, 3, 5 }	{ 5, 1, 5, 3 }
-    * { 5, 3, 1, 5 }	{ 5, 3, 5, 1 }
-    * { 5, 5, 1, 3 }	{ 5, 5, 3, 1 }
-  * Ensure your program efficiently avoids duplicated permutations. Test it with { 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 }.
-* Hint: http://hardprogrammer.blogspot.com/2006/11/permutaciones-con-repeticin.html
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Exercises (6)
-* x Write a recursive program to solve the "8 Queens Puzzle" with backtracking. Learn more at: http://en.wikipedia.org/wiki/Eight_queens_puzzle
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Free Trainings @ Telerik Academy
-* C# Programming @ Telerik Academy
-    * csharpfundamentals.telerik.com
-  * Telerik Software Academy
-    * academy.telerik.com
-  * Telerik Academy @ Facebook
-    * facebook.com/TelerikAcademy
-  * Telerik Software Academy Forums
-    * forums.academy.telerik.com
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
+<!-- section start -->
+<!-- attr: { id:'questions', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+# Questions
+## Recursion
+[link to Telerik Academy Forum](http://telerikacademy.com/Forum/Category/15/data-structures-algorithms)
