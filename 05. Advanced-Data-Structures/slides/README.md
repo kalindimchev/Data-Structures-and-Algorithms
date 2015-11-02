@@ -1,6 +1,13 @@
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- section start -->
+<!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Advanced Data Structures
 ##  Wintellect Power Collections, C5 Collections
+
+<div class="signature">
+    <p class="signature-course">Data Structures and Algorithms</p>
+    <p class="signature-initiative">Telerik Software Academy</p>
+    <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
+</div>
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
@@ -14,6 +21,7 @@
 * Other Advanced Data Structures
   * Suffix trees, interval trees, ropes, tries, etc.
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Standard .NETData Structures
 ##  Built-In .NET Data Structure Implementations
@@ -30,8 +38,8 @@
 * Balanced search tree structures
   * `SortedSet<T>`, `SortedDictionary<K,V>`
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# .NET Data Structures (2)
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.95em' } -->
+<!-- # .NET Data Structures -->
 * Sets and bags
   * Sets – `HashSet<T>`, `SortedSet<T>`
   * Bag – no standard .NET class
@@ -40,13 +48,19 @@
 * Special tree structures &rarr; no
   * Suffix tree, interval tree, index tree, trie
 * Graphs &rarr; no
-  * Directed / undirected, weighted /un-weighted, connected/ non-connected, …
+  * Directed / undirected
+  * Weighted / un-weighted
+  * Connected / non-connected, …
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # .NET Generic Collections
 
+<img class="slide-image" src="imgs/generic-collections.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # .NET Untyped Collections
+
+<img class="slide-image" src="imgs/untyped-collections.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Special .NET Collections
@@ -65,9 +79,14 @@
 # Special .NET Collections
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Wintellect Power Collections
 ##  Open Source C# Implementation of All Major Data Structures: Lists, Sets, Bags, Dictionaries, etc.
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Wintellect Power Collections
@@ -75,6 +94,8 @@
   * Download: http://powercollections.codeplex.com
 * Installing Power Collections in Visual Studio
   * Use NuGet package manager
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Power Collections Classes
@@ -88,6 +109,8 @@
   * Add / Find / Remove work in time O(log(N))
   * `T` should implement `IComparable<T>`
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Power Collections Classes (2)
 * `Set<T>`
@@ -99,6 +122,8 @@
   * Add / Find / Remove work in time O(log(N))
   * Like .NET’s `SortedSet<T>`
   * Provides fast `.Range(from, to)` operation
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Power Collections Classes (3)
@@ -112,6 +137,8 @@
   * Add / Find / Remove work in time O(log(N))
   * Provides fast `.Range(from, to)` operation
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Power Collections Classes (4)
 * `Deque<T>`
@@ -124,9 +151,13 @@
     * Implemented by the data structure "`Rope`"
       * Special kind of balanced binary tree: http://en.wikipedia.org/wiki/Rope_(data_structure)
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 ##  [Demo]()
 # Wintellect Power Collections
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Priority Queue
@@ -140,36 +171,48 @@
   * See the data structure "binary heap"
   * Can be implemented also by `OrderedBag<T>`
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Priority Queue Implementation
-* class PriorityQueue<T> where T : IComparable<T>
-* {
-*    private OrderedBag<T> queue;
-*    public int Count 
-*    {
-*       get { return this.queue.Count; }
-*    }
-*    public PriorityQueue()
-*    {
-*       this.queue = new OrderedBag<T>();   
-*    }
-*    public void Enqueue(T element)
-*    {
-*       this.queue.Add(element);
-*    }
-*    public T Dequeue()
-*    {
-*       return this.queue.RemoveFirst();
-*    }
-* }
+
+```cs
+class PriorityQueue<T> where T : IComparable<T>
+{
+   private OrderedBag<T> queue;
+   public int Count 
+   {
+      get { return this.queue.Count; }
+   }
+   public PriorityQueue()
+   {
+      this.queue = new OrderedBag<T>();   
+   }
+   public void Enqueue(T element)
+   {
+      this.queue.Add(element);
+   }
+   public T Dequeue()
+   {
+      return this.queue.RemoveFirst();
+   }
+}
+```
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Priority Queue
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Advanced Data Structures
 ##  Suffix Trees, Interval Trees, Tries, Ropes, Heaps, …
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Advanced Data Structures
@@ -182,6 +225,8 @@
   * Balanced tree structure for indexeditems with fast inserts / delete
   * Allows fast string edit operations
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Advanced Data Structures (2)
 * Interval tree
@@ -193,9 +238,14 @@
   * Used to keep sorted indices of database records
   * B-tree, B+ tree, T-tree
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # C5 Collections
 ##  Open Source Generic Collection Library for C#
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # C5 Collections
@@ -208,6 +258,8 @@
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # C5 Collection Classes
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # C5 Collection Classes
@@ -222,6 +274,8 @@
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Advanced Data Structures
 * http://academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Exercises
@@ -241,4 +295,6 @@
     * facebook.com/TelerikAcademy
   * Telerik Software Academy Forums
     * forums.academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
