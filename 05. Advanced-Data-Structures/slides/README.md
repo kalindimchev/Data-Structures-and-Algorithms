@@ -9,6 +9,7 @@
     <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </div>
 
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
 * Standard .NET Data Structures
@@ -21,10 +22,12 @@
 * Other Advanced Data Structures
   * Suffix trees, interval trees, ropes, tries, etc.
 
+
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Standard .NETData Structures
 ##  Built-In .NET Data Structure Implementations
+
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # .NET Data Structures
@@ -37,6 +40,7 @@
   * No standard multi-dictionary .NET class
 * Balanced search tree structures
   * `SortedSet<T>`, `SortedDictionary<K,V>`
+
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.95em' } -->
 <!-- # .NET Data Structures -->
@@ -52,6 +56,7 @@
   * Weighted / un-weighted
   * Connected / non-connected, …
 
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # .NET Generic Collections
 
@@ -61,6 +66,7 @@
 # .NET Untyped Collections
 
 <img class="slide-image" src="imgs/untyped-collections.png" style="width:80%; top:10%; left:10%" />
+
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Special .NET Collections
@@ -75,18 +81,17 @@
 * Concurrent collections (thread-safe)
   * `BlockingCollection<T>`, `ConcurrentBag<T>`, …
 
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Special .NET Collections
 ##  [Demo]()
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Wintellect Power Collections
 ##  Open Source C# Implementation of All Major Data Structures: Lists, Sets, Bags, Dictionaries, etc.
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Wintellect Power Collections
@@ -95,7 +100,8 @@
 * Installing Power Collections in Visual Studio
   * Use NuGet package manager
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+<img class="slide-image" src="imgs/wintelect-power-collections.png" style="width:80%; top:55%; left:10%" />
+
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Power Collections Classes
@@ -109,10 +115,9 @@
   * Add / Find / Remove work in time O(log(N))
   * `T` should implement `IComparable<T>`
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Power Collections Classes (2)
+<!-- # Power Collections Classes -->
 * `Set<T>`
   * A set based on hash-table (no duplicates)
   * Add / Find / Remove work in time O(1)
@@ -122,25 +127,23 @@
   * Add / Find / Remove work in time O(log(N))
   * Like .NET’s `SortedSet<T>`
   * Provides fast `.Range(from, to)` operation
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+  * 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Power Collections Classes (3)
-* `MultiDictionary<TKey, TValue>`
+<!-- # Power Collections Classes -->
+* `MultiDictionary<TKey,TValue>`
   * A dictionary (map) implemented by hash-table
   * Allows duplicates (configurable)
   * Add / Find / Remove work in time O(1)
-  * Like `Dictionary<TKey, List<TValue>>`
-* `OrderedDictionary<TKey, TValue>` / `OrderedMultiDictionary<TKey, TValue>`
+  * Like `Dictionary<TKey,List<TValue>>`
+* `OrderedDictionary<TKey,TValue>` / `OrderedMultiDictionary<TKey,TValue>`
   * A dictionary based on balanced search tree
   * Add / Find / Remove work in time O(log(N))
-  * Provides fast `.Range(from, to)` operation
+  * Provides fast `.Range(from,to)` operation
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Power Collections Classes (4)
+<!-- # Power Collections Classes -->
 * `Deque<T>`
   * Double-ended queue (deque)
 * `BigList<T>`
@@ -151,15 +154,13 @@
     * Implemented by the data structure "`Rope`"
       * Special kind of balanced binary tree: http://en.wikipedia.org/wiki/Rope_(data_structure)
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-##  [Demo]()
 # Wintellect Power Collections
+##  [Demo]()
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true } -->
 # Priority Queue
 * What is a "`priority` `queue`"?
   * Data structure to efficiently support finding the item with the highest priority
@@ -168,12 +169,11 @@
     * `Enqueue(T element)`
     * `Dequeue() &rarr; T`
 * There is no build-in `priority` `queue` in .NET
-  * See the data structure "binary heap"
+  * See the data structure "[binary heap](http://en.wikipedia.org/wiki/Binary_heap)"
   * Can be implemented also by `OrderedBag<T>`
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.9em' } -->
 # Priority Queue Implementation
 
 ```cs
@@ -199,69 +199,72 @@ class PriorityQueue<T> where T : IComparable<T>
 }
 ```
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Priority Queue
 ##  [Demo]()
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Advanced Data Structures
 ##  Suffix Trees, Interval Trees, Tries, Ropes, Heaps, …
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Advanced Data Structures
-* Suffix tree (position tree)
+* **Suffix tree** (position tree)
   * Represents the suffixes of given string
   * Used to implement fast search in string
-* Trie (prefix tree)
-  * Special tree structure used for fastmulti-pattern matching
-* Rope
+* **Trie** (prefix tree)
+  * Special tree structure used for <br/>fastmulti-pattern matching
+* **Rope**
   * Balanced tree structure for indexeditems with fast inserts / delete
   * Allows fast string edit operations
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+<img class="slide-image" src="imgs/suffix-tree.png" style="width:18%; top:12%; right:0%" />
+<img class="slide-image" src="imgs/trie.png" style="width:20%; top:40%; right:0%" />
+<img class="slide-image" src="imgs/rope.png" style="width:23%; top:73%; right:0%" />
+
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Advanced Data Structures (2)
-* Interval tree
+<!-- # Advanced Data Structures -->
+* **Interval tree**
   * Keeps intervals [a…b] in ordered balanced tree
   * Allows to efficiently find all intervals that overlap with any given interval or point
-* Binary heap, Fibonacci heap
-  * Special tree-like data structures toefficiently implement a priority queue
-* Index trees
+* **Binary heap**, **Fibonacci heap**
+  * Special tree-like data structures <br/>toefficiently implement a priority queue
+* **Index trees**
   * Used to keep sorted indices of database records
   * B-tree, B+ tree, T-tree
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+<img class="slide-image" src="imgs/binary-heap.png" style="width:23%; top:36%; right:0%" />
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # C5 Collections
 ##  Open Source Generic Collection Library for C#
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # C5 Collections
 * What are "C5 Collections"?
   * C5 Generic Collection Library for C# and CLI
   * Open-Source Data Structures Library for .NET
   * http://www.itu.dk/research/c5/
-  * Have solid documentation (book) – http://www.itu.dk/research/c5/latest/ITU-TR-2006-76.pdf
-  * The C5 library defines its own interfaces like `IEnumerable<T>`, `IIndexed<T>`, `IIndexedSorted<T>`, etc.
+  * Have solid documentation ([book](http://www.itu.dk/research/c5/latest/ITU-TR-2006-76.pdf))
+  * The C5 library defines its own interfaces like
+    * `IEnumerable<T>`
+    * `IIndexed<T>`
+    * `IIndexedSorted<T>`
+    * etc.
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # C5 Collection Classes
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+<img class="slide-image" src="imgs/c5-classes.png" style="width:90%; top:10%; left:5%" />
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # C5 Collection Classes
 * Classical collection classes
   * `ArrayList<T>`, `LinkedList<T>`, `CircularQueue<T>`, `HashSet<T>`, `TreeSet<T>`, `HashBag<T>`, `TreeBag<T>`
@@ -271,30 +274,10 @@ class PriorityQueue<T> where T : IComparable<T>
 * `IntervalHeap<T>`
   * Efficient double-ended priority queue
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Advanced Data Structures
-* http://academy.telerik.com
+<!-- section start -->
+<!-- attr: {id: 'questions', class: 'slide-section'} -->
+# Questions
+## Advanced Data Structures
+[link to Telerik Academy Furum](https://telerikacademy.com/Forum/Category/15/data-structures-algorithms)
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Exercises
-* Implement a class `PriorityQueue<T>` based on the data structure "binary heap".
-* Write a program to read a large collection of products (name + price) and efficiently find the first 20 products in the price range [a…b]. Test for 500 000 products and 10 000 price searches.
-* Hint: you may use `OrderedBag<T>` and sub-ranges.
-* Write a program that finds a set of words (e.g. 1000 words) in a large text (e.g. 100 MB text file). Print how many times each word occurs in the text.
-* Hint: you may find a C# trie in Internet.
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Free Trainings @ Telerik Academy
-* C# Programming @ Telerik Academy
-    * csharpfundamentals.telerik.com
-  * Telerik Software Academy
-    * academy.telerik.com
-  * Telerik Academy @ Facebook
-    * facebook.com/TelerikAcademy
-  * Telerik Software Academy Forums
-    * forums.academy.telerik.com
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
