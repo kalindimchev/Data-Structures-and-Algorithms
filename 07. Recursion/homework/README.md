@@ -3,23 +3,22 @@
 
 1. Write a recursive program that simulates the execution of `n nested loops `from 1 to n.
   * _Examples_:
-```
-         1 1
-n=2  ->  1 2
-         2 1
-         2 2
-```
-```
-         1 1 1
-         1 1 2
-         1 1 3
-         1 2 1
-n=3  ->  ...
-         3 2 3
-         3 3 1
-         3 3 2
-         3 3 3
-```
+  ```
+           1 1
+  n=2  ->  1 2
+           2 1
+           2 2
+  
+           1 1 1
+           1 1 2
+           1 1 3
+           1 2 1
+  n=3  ->  ...
+           3 2 3
+           3 3 1
+           3 3 2
+           3 3 3
+  ```
 2. Write a recursive program for generating and printing all the `combinations with duplicates `of k elements from n-element set. Example:
   * `n=3, k=2` &rarr; `(1 1), (1 2), (1 3), (2 2), (2 3), (3 3)`
 3. Modify the previous program to `skip duplicates`:
@@ -39,14 +38,14 @@ n=3  ->  ...
   * Write a recursive program for finding all areas of passable cells in the matrix.
 11. *Write a program to generate all `permutations with repetitions `of given multi-set.
   * _Example_: the multi-set `{1, 3, 5, 5}` has the following 12 unique permutations:
-```
-  { 1, 3, 5, 5 }	{ 1, 5, 3, 5 }
-  { 1, 5, 5, 3 }	{ 3, 1, 5, 5 }
-  { 3, 5, 1, 5 }	{ 3, 5, 5, 1 }
-  { 5, 1, 3, 5 }	{ 5, 1, 5, 3 }
-  { 5, 3, 1, 5 }	{ 5, 3, 5, 1 }
-  { 5, 5, 1, 3 }	{ 5, 5, 3, 1 }
-```
+  ```
+    { 1, 3, 5, 5 }	{ 1, 5, 3, 5 }
+    { 1, 5, 5, 3 }	{ 3, 1, 5, 5 }
+    { 3, 5, 1, 5 }	{ 3, 5, 5, 1 }
+    { 5, 1, 3, 5 }	{ 5, 1, 5, 3 }
+    { 5, 3, 1, 5 }	{ 5, 3, 5, 1 }
+    { 5, 5, 1, 3 }	{ 5, 5, 3, 1 }
+  ```
   * Ensure your program efficiently avoids duplicated permutations.
   * Test it with `{ 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 }`.
   * Hint: [Permutations with repetition](http://hardprogrammer.blogspot.com/2006/11/permutaciones-con-repeticin.html)
