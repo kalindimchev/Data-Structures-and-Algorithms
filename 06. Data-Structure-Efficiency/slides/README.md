@@ -1,6 +1,9 @@
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- section start -->
+<!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Data Structures Efficiency
 ##  Computational Complexity of FundamentalData Structures, Choosing a Data Structure
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
@@ -13,9 +16,14 @@
   * Bags
 * Choosing Proper Data Structure
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Comparing Data Structures
 ##  Time Complexity of Basic Operations
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Data Structures Efficiency
@@ -67,6 +75,8 @@
 # Data Structures Efficiency
 * http://academy.telerik.com
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Exercises
 * A text file `students.txt` holds information about students and their courses in the following format:
@@ -102,4 +112,6 @@ SQL: Ivan Kolev, Stefka Nikolova
     * facebook.com/TelerikAcademy
   * Telerik Software Academy Forums
     * forums.academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 

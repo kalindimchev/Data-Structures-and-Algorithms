@@ -1,10 +1,13 @@
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- section start -->
+<!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Recursion
 ##  The Power of the Recursive Algorithms
-* Data Structures and Algorithms
-* Telerik Software Academy
-* http://academy.telerik.com 
-
+<div class="signature">
+    <p class="signature-course">Data Structures and Algorithms</p>
+    <p class="signature-initiative">Telerik Software Academy</p>
+    <a href = "http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
+</div>
+<!-- section start -->
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
 * What is Recursion?
@@ -14,6 +17,8 @@
 * Recursion or Iteration?
   * Harmful Recursion
   * Optimizing Bad Recursion
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # What is Recursion?
@@ -25,6 +30,8 @@
     * Оr through other methods
   * Exit criteria (`bottom`)
     * Prevents infinite recursion
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Recursive Factorial – Example
@@ -40,6 +47,8 @@ n! = n x (n–1)! for n >= 0
   * 2! = 2 x 1! = 2 x 1 x 1 = 2
   * 1! = 1 x 0! = 1 x 1 = 1
   * 0! = 1
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Recursive Factorial – Example
@@ -61,6 +70,8 @@ static decimal Factorial(decimal num){    if (num == 0)
 # Recursive Factorial
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating 0/1 Vectors
 * How to generate all 8-bit vectors recursively?
@@ -74,6 +85,8 @@ static decimal Factorial(decimal num){    if (num == 0)
     * 11111111
 * How to generate all n-bit vectors?
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Generating 0/1 Vectors (2)
 * Algorithm `Gen01(n)`: put 0 and 1 at the last position `n` and call `Gen01(n-1)` for the rest:
@@ -83,11 +96,8 @@ static decimal Factorial(decimal num){    if (num == 0)
 * Gen01(5):
 * Gen01(4)
 * Gen01(4)
-
-```cs
-...
-Gen01(-1) &rarr; Stop!
-```
+* ...
+* Gen01(-1) &rarr; Stop!
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating 0/1 Vectors (3)
@@ -112,13 +122,20 @@ static void Main()
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating 0/1 Vectors
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating Combinations
 ##  Simple Recursive Algorithm
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Generating Combinations
@@ -134,11 +151,8 @@ static void Main()
 * Algorithm `GenCombs(k)`: put the numbers [1..n] at position `k` the and call `GenCombs(k+1)` recursively for the rest of the elements:
 * GenCombs(0):
 * GenCombs(1)
-
-```cs
-...
-GenCombs(n) &rarr; Stop!
-```
+* ...
+* GenCombs(n) &rarr; Stop!
 <div class="fragment balloon">Put all numbers in range [1..n] at position k</div>
 * GenCombs(1):
 * GenCombs(2)
@@ -148,9 +162,14 @@ GenCombs(n) &rarr; Stop!
 # Generating Combinations
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Backtracking
 ##  Solving Computational Problemsby Generating All Candidates
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Backtracking
@@ -167,6 +186,8 @@ GenCombs(n) &rarr; Stop!
 * Write a program to find all possible placements of 8 queens on a chessboard
   * So that no two queens attack each other
   * http://en.wikipedia.org/wiki/Eight_queens_puzzle
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Solving The 8 Queens Problem
@@ -283,6 +304,8 @@ static void Main()
 # Find All Paths in a Labyrinth
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Find All Paths and Print Them
 * How to print all paths found by our recursive algorithm?
@@ -324,9 +347,14 @@ static void FindPathToExit(int row, int col, char direction)
 # Find and Print All Paths in a Labyrinth
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Recursion or Iteration?
 ##  When to Use and When to Avoid Recursion?
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Recursion Can be Harmful!
@@ -352,10 +380,14 @@ static void Main()
 # Harmful Recursion
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # How the Recursive Fibonacci Calculation Works?
 * fib(n) makes about fib(n) recursive calls
 * The same value is calculated many, many times!
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Fast Recursive Fibonacci
@@ -382,6 +414,8 @@ static decimal Fibonacci(int n)
 # Fast Recursive Fibonacci
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # When to Use Recursion?
 * Avoid recursion when an obvious iterative algorithm exists
@@ -401,6 +435,8 @@ static decimal Fibonacci(int n)
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Recursion
 * http://academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Exercises
@@ -450,14 +486,13 @@ static decimal Fibonacci(int n)
     * { 5, 3, 1, 5 }	{ 5, 3, 5, 1 }
     * { 5, 5, 1, 3 }	{ 5, 5, 3, 1 }
   * Ensure your program efficiently avoids duplicated permutations. Test it with { 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 }.
-
-```cs
-Hint: http://hardprogrammer.blogspot.com/2006/11/permutaciones-con-repeticin.html
-```
+* Hint: http://hardprogrammer.blogspot.com/2006/11/permutaciones-con-repeticin.html
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Exercises (6)
 * x Write a recursive program to solve the "8 Queens Puzzle" with backtracking. Learn more at: http://en.wikipedia.org/wiki/Eight_queens_puzzle
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Free Trainings @ Telerik Academy
@@ -469,4 +504,6 @@ Hint: http://hardprogrammer.blogspot.com/2006/11/permutaciones-con-repeticin.htm
     * facebook.com/TelerikAcademy
   * Telerik Software Academy Forums
     * forums.academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 

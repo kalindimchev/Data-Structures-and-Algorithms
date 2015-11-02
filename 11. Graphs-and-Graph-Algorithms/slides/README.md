@@ -1,9 +1,14 @@
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- section start -->
+<!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Graphs
 ##  Fundamentals, Terminology, Traversal, Algorithms
-* Data Structures and Algorithms
-* Telerik Software Academy
-* http://academy.telerik.com 
+<div class="signature">
+    <p class="signature-course">Data Structures and Algorithms</p>
+    <p class="signature-initiative">Telerik Software Academy</p>
+    <a href = "http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
+</div>
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
@@ -15,9 +20,14 @@
 * Topological sorting
 * Prim and Kruskal
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Graphs
 ##  Definitions and Terminology
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Graph Data Structure
@@ -190,9 +200,14 @@
   * State machines
     * States are nodes, transitions are edges
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Representing Graphs
 ##  Classic and OOP Ways
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Representing Graphs
@@ -262,13 +277,18 @@ Graph g = new Graph(new List<int>[] {
 * Using external library:
   * `QuickGraph `- http://quickgraph.codeplex.com/
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 # Representing Graphs
 ##  [Demo]()
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Traversing Graphs
 ##  Good old DFS and BFS
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Graph Traversal Algorithms
@@ -327,18 +347,25 @@ vois Main()
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 # Graphs and Traversals
 ##  [Demo]()
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Connectivity
 ##  Connecting the chain
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Connectivity
 * `Connected component `of undirected graph
   *  A sub-graph in which any two nodes are connected to each other by paths
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Connectivity (2)
@@ -347,19 +374,18 @@ vois Main()
 * Each time you start a new traversing
   * You find a new connected component!
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Connectivity (3)
-
-```cs
-foreach node from graph G
-{
-   if node is unvisited
-   {
-      DFS(node);
-      countOfComponents++;
-   }
-}
-```
+* foreach node from graph G
+* {
+*    if node is unvisited
+*    {
+*       DFS(node);
+*       countOfComponents++;
+*    }
+* }
 * Algorithm:
 * xNote: Do not forget to mark each node in the DFS as visited!
 * F
@@ -377,13 +403,18 @@ foreach node from graph G
 * Checking whether a graph is connected
   * If DFS / BFS passes through all vertices &rarr; graph is connected!
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 # Connectivity
 ##  [Demo]()
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Dijkstra’s Algorithm
 ##  Shortest path in graph
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Dijkstra’s Algorithm
@@ -400,10 +431,14 @@ foreach node from graph G
 * In non-weighted graphs or edges with same weight finding shortest path can be done with BFS
   * xNote: Path from A to B does not matter –        triangle inequality
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Dijkstra’s Algorithm (3)
 * In weighted graphs – simple solution can be done with breaking the edges in sub-vertexes
   * xToo much memory usage even for smaller graphs!
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Dijkstra’s Algorithm (4)
@@ -413,6 +448,8 @@ foreach node from graph G
   * Get the lowest in priority - B
   * If edge B-A exists, check (S-B) + (B-A) and save the lower one
   * Overcome the triangle inequality miss
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Dijkstra’s Algorithm (5)
@@ -434,29 +471,28 @@ foreach node from graph G
 # Dijkstra’s Algorithm (7)
 * Example graph:
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Dijkstra’s Algorithm (8)
 * Pseudo code
-
-```cs
-set all nodes DIST = INFINITY;
-set current node the source and distance = 0;
-Q -> all nodes from graph, ordered by distance;
-while (Q is not empty)
-{
-  a = dequeue the smallest element (first in PriorityQueue);
-     if (distance of a == INFINITY) break;
-     foreach neighbour v of a
-	{
-	    potDistance = distance of a + distance of (a-v);
-	    if (potDistance < distance of v)
-	    {
-		distance of v = potDistance;
-		reorder Q;
-	    }
-	}
-}
-```
+* set all nodes DIST = INFINITY;
+* set current node the source and distance = 0;
+* Q -> all nodes from graph, ordered by distance;
+* while (Q is not empty)
+* {
+*   a = dequeue the smallest element (first in PriorityQueue);
+*      if (distance of a == INFINITY) break;
+*      foreach neighbour v of a
+* 	{
+* 	    potDistance = distance of a + distance of (a-v);
+* 	    if (potDistance < distance of v)
+* 	    {
+* 		distance of v = potDistance;
+* 		reorder Q;
+* 	    }
+* 	}
+* }
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Dijkstra’s Algorithm (9)
@@ -473,9 +509,12 @@ while (Q is not empty)
 # Dijkstra’s Algorithm
 ##  [Demo]()
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Topological Sorting
 ##  Order it!
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Topological Sorting
@@ -487,6 +526,8 @@ while (Q is not empty)
   * 3, 5, 7, 8, 11, 2, 9, 10
   * 5, 7, 3, 8, 11, 10, 9, 2
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Topological Sorting (2)
 * `Rules`
@@ -494,6 +535,8 @@ while (Q is not empty)
   * Directed graphs with cycles cannot be sorted
   * Sorting is not unique
   * Various sorting algorithms exists and they give different results
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Topological Sorting (3)
@@ -507,22 +550,19 @@ while (Q is not empty)
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Topological Sorting (4)
 * Pseudo code
-
-```cs
-L ← Empty list that will contain the sorted elements
-S ← Set of all nodes with no incoming edges
-while S is non-empty do
-    remove a node n from S
-    insert n into L
-    for each node m with an edge e from n to m do
-        remove edge e from the graph
-        if m has no other incoming edges then
-            insert m into S
-if graph has edges then
-    return error (graph has at least one cycle)
-else 
-    return L (a topologically sorted order)
-```
+* L ← Empty list that will contain the sorted elements
+* S ← Set of all nodes with no incoming edges
+* while S is non-empty do
+*     remove a node n from S
+*     insert n into L
+*     for each node m with an edge e from n to m do
+*         remove edge e from the graph
+*         if m has no other incoming edges then
+*             insert m into S
+* if graph has edges then
+*     return error (graph has at least one cycle)
+* else 
+*     return L (a topologically sorted order)
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Step #1-2
@@ -637,28 +677,28 @@ else
 # Topological Sorting (6)
 * Pseudo code
 * http://www.geeksforgeeks.org/topological-sorting/
-
-```cs
-L ← Empty list that will contain the sorted nodes
-while there are unmarked nodes do
-    select an unmarked node n
-    visit(n) 
-function visit(node n)
-    if n has a temporary mark then stop (not a DAG)
-    if n is not marked (i.e. has not been visited yet) then
-        mark n temporarily
-        for each node m with an edge from n to m do
-            visit(m)
-        mark n permanently
-        add n to head of L
-```
+* L ← Empty list that will contain the sorted nodes
+* while there are unmarked nodes do
+*     select an unmarked node n
+*     visit(n) 
+* function visit(node n)
+*     if n has a temporary mark then stop (not a DAG)
+*     if n is not marked (i.e. has not been visited yet) then
+*         mark n temporarily
+*         for each node m with an edge from n to m do
+*             visit(m)
+*         mark n permanently
+*         add n to head of L
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 # TS Using DFS
 ##  [Demo]()
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Minimum Spanning Tree
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Minimum Spanning Tree
@@ -666,6 +706,8 @@ function visit(node n)
   * Subgraph (Tree)
   * Connects all vertices together
 * All connected graphs have spanning tree
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Minimum Spanning Tree
@@ -675,15 +717,25 @@ function visit(node n)
 * First used in electrical network
   * Minimal cost of wiring
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Minimum Spanning Forest
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Minimum Spanning Forest
 * Minimum Spanning Forest – set of all minimum spanning trees (when the graph is not connected)
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Prim’s Algorithm
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Prim’s Algorithm
@@ -861,13 +913,18 @@ function visit(node n)
 # Prim
 ##  [Demo]()
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Kruskal’s Algorithm
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Kruskal’s Algorithm
 * The graph may not be connected
   * If the graph is not connected – minimum spanning forest
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Kruskal’s Algorithm
@@ -1093,45 +1150,15 @@ function visit(node n)
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Trees and Graphs
 * Questions?
-
-```cs
-?
-```
-
-```cs
-?
-```
-
-```cs
-`?`
-```
-
-```cs
-?
-```
-
-```cs
-?
-```
-
-```cs
-?
-```
-
-```cs
-?
-```
-
-```cs
-?
-```
-
-```cs
-?
-```
-
-```cs
-?
-```
+* ?
+* ?
+* `?`
+* ?
+* ?
+* ?
+* ?
+* ?
+* ?
+* ?
 * http://algoacademy.telerik.com
 

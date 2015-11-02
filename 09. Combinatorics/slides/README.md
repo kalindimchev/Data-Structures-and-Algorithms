@@ -1,9 +1,14 @@
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- section start -->
+<!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Combinatorics
 ##  Brief Overview of Combinations, Permutations and Binary Vectors
-* Data Structures and Algorithms
-* Telerik Software Academy
-* http://academy.telerik.com 
+<div class="signature">
+    <p class="signature-course">Data Structures and Algorithms</p>
+    <p class="signature-initiative">Telerik Software Academy</p>
+    <a href = "http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
+</div>
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
@@ -14,8 +19,13 @@
 * Binary Vectors
 * Resources
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Definitions in Combinatorics
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Combinatorics
@@ -24,12 +34,16 @@
 * Combinatorial problems arise inmany areas of pure mathematics
   * Notably in algebra, probabilitytheory, topology, geometry,physics, chemistry, biology, etc.
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Combinations
 * "My fruit salad is a combination of grapes, strawberries and bananas" 
   * We don't care what orderthe fruits are in
     * "bananas, grapesand strawberries" or"grapes, bananas andstrawberries" &rarr; it isthe same salad
 * If the `order doesn't `matter, it is a `combination`
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Permutations / Variations
@@ -41,6 +55,8 @@
   * A permutation / variation is an ordered Combination
 * Easy to remember: "Permutation ... Position"
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Factorial
 * The factorial function (!) just means to multiply a series of descending natural numbers
@@ -48,6 +64,8 @@
     * 1! = 1, 0! = 1
     * 4! = 4 × 3 × 2 × 1 = 24
     * 7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Factorial - Source code
@@ -59,21 +77,18 @@
 *         result = result x i;
 *     return result;
 * }
+* Factorial – recursive
+* static long Factorial(int n)
+* {
+*     if (n == 0) return 1;
+*     return Factorial(n - 1) x n;
+* }
 
-```cs
-Factorial – recursive
-```
-
-```cs
-static long Factorial(int n)
-{
-    if (n == 0) return 1;
-    return Factorial(n - 1) x n;
-}
-```
-
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Variations
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Variations
@@ -84,11 +99,15 @@ static long Factorial(int n)
   * `n` × `n` × ... × `n` (k times)
   * 	       nk
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Variations (2)
 * Example: in the lock below, there are 10 numbers to choose from (0, 1, … 9) and you choose 3 of them:
   * 10 × 10 × 10 (3 times) = `103` = 1 000 variations
 * All variations from (0, 0, 0) to (9, 9, 9) 
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating Variations
@@ -108,9 +127,13 @@ static long Factorial(int n)
 *     }
 * }
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Variations with Repetitions
 ##  [Demo]()
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Variations without Repetition
@@ -121,10 +144,7 @@ static long Factorial(int n)
   * 16! / 13! = 16 × 15 × 14
   *       
 *  
-
-```cs
-where n is the number of things to choose from, and you choose k of them(No repetition, order matters) 
-```
+* where n is the number of things to choose from, and you choose k of them(No repetition, order matters) 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Variations without Repetition
@@ -133,10 +153,9 @@ where n is the number of things to choose from, and you choose k of them(No repe
 * How to generate variationswithout repetitions?
   * The same way like variations with repetitions
   * Just use each element at most once
+* ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
 
-```cs
-ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
-```
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating Variationswithout Repetitions
@@ -156,12 +175,19 @@ ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
 * }
 * GenerateVariationsNoReps(0);
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Variations without Repetitions
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Permutations
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Permutations
@@ -172,6 +198,8 @@ ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
   * Second choice = `15 `possibilities, etc., etc.
 * Total permutations:
   * 16 × 15 × 14 ×...× 2 × 1 = `16! `= 20 922 789 888 000
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating Permutations
@@ -191,9 +219,13 @@ ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
 *   }
 * }
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating Permutations
 ##  [Demo]()
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Permutations with Repetitions
@@ -230,12 +262,19 @@ ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
 *   }
 * }
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating Permutationswith Repetitions
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Combinations
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Combinations
@@ -248,6 +287,8 @@ ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
     * Lottery numbers
     * TOTO 6/49, 6/42, 5/35
     * 2,14,15,27,30,33
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Combinations without Repetition
@@ -277,9 +318,13 @@ ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
 *     }
 * }
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Combinationswithout Repetitions
 ##  [Demo]()
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Pascal's Triangle
@@ -289,6 +334,8 @@ ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
   * The value there is your answer
 * Build the triangle: start with "1" atthe top, then continue placingnumbers below it in a triangular pattern
 *  
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Pascal's Triangle's (2)
@@ -300,6 +347,8 @@ ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
   * Third diagonal – triangular numbers
 * Horizontal sums: powers of 2
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Binomial Coefficients
 * Calculate using recursion:
@@ -310,17 +359,14 @@ ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db, dc
 * }
 *  
 * Calculate using dynamic programming:
-
-```cs
-decimal m[MAX], i, j;
-for (i = 0; i <= n; i++) {
-   m[i] = 1;
-   if (i > 1) {
-      if (k < i - 1) j = k; else j = i - 1;
-      for (; j >= 1; j--) m[j] += m[j - 1];
-   }
-} // The answer is in m[k]
-```
+* decimal m[MAX], i, j;
+* for (i = 0; i <= n; i++) {
+*    m[i] = 1;
+*    if (i > 1) {
+*       if (k < i - 1) j = k; else j = i - 1;
+*       for (; j >= 1; j--) m[j] += m[j - 1];
+*    }
+* } // The answer is in m[k]
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Combinations with Repetition
@@ -333,6 +379,8 @@ for (i = 0; i <= n; i++) {
   * {b, l, v} (one each of banana, lemon and vanilla)
   * {b, v, v} (one of banana, two of vanilla)
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Combinations with Repetition
 * Ice-cream example
@@ -343,6 +391,8 @@ for (i = 0; i <= n; i++) {
   * {c, c, c} (3 scoops of chocolate)
   * {b, l, v} (banana, lemon, vanilla)
   * {b, v, v} (banana, two of vanilla)
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Combinations with Repetition
@@ -370,21 +420,27 @@ for (i = 0; i <= n; i++) {
 *     }
 * }
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Generating Combinationswith Repetitions
 ##  [Demo]()
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Combinatorial Formulas
 * Calculating the number of permutations, variations, combinations
   * Use the well known formulas:
+* Source: http://users.telenet.be/vdmoortel/dirk/Maths/PermVarComb.html
 
-```cs
-Source: http://users.telenet.be/vdmoortel/dirk/Maths/PermVarComb.html
-```
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Binary Vectors
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Binary Vectors
@@ -392,6 +448,8 @@ Source: http://users.telenet.be/vdmoortel/dirk/Maths/PermVarComb.html
 * Combinatorial properties of binary vectors:
   * Number of binary vectors of length n: 2n.
   * Number of binary vectors of length `n` and with `k` `1` is C(n, k) (we choose k positions for n `1`)
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Gray Code
@@ -416,9 +474,13 @@ Source: http://users.telenet.be/vdmoortel/dirk/Maths/PermVarComb.html
 * }
 * static int Main() { Forwgray(n); return 0; }
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Gray Code
 ##  [Demo]()
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Resources
@@ -451,4 +513,6 @@ Source: http://users.telenet.be/vdmoortel/dirk/Maths/PermVarComb.html
     * facebook.com/TelerikAcademy
   * Telerik Software Academy Forums
     * forums.academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 

@@ -1,9 +1,14 @@
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- section start -->
+<!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Dictionaries, Hash Tables and Sets
 ##  Dictionaries, Hash Tables, Hashing, Collisions, Sets
-* Data Structures and Algorithms
-* Telerik Software Academy
-* http://academy.telerik.com 
+<div class="signature">
+    <p class="signature-course">Data Structures and Algorithms</p>
+    <p class="signature-initiative">Telerik Software Academy</p>
+    <a href = "http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
+</div>
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
@@ -12,9 +17,14 @@
 * Dictionary<TKey, TValue> Class
 * Sets: HashSet<T> and SortedSet<T>
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Dictionaries
 ##  Data Structures that Map Keys to Values
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # The Dictionary (Map) ADT
@@ -28,23 +38,27 @@
 * Can be implemented in several ways
   * List, array, hash table, balanced tree, ...
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # ADT Dictionary – Example
 * Example dictionary:
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Hash Tables
 ##  What is Hash Table? How it Works?
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Hash Table
 * A hash table is an array that holds a set of(key, value) pairs
 * The process of mapping a key to a positionin a table is called `hashing`
 * T
-
-```cs
-h(k)
-```
+* h(k)
 <div class="fragment balloon">Hash table of size m</div>
 <div class="fragment balloon">Hash function h: k → 0 … m-1</div>
 
@@ -55,10 +69,7 @@ h(k)
   * `h: k → 0 … m-1`
 * For any value `k` in the key range and some hash function `h` we have `h(k)` `=` `p` and `0` `≤` `p` `<` `m`
 * T
-
-```cs
-h(k)
-```
+* h(k)
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Hashing Functions
@@ -80,6 +91,8 @@ h(k)
   * Re-hashing (second hash function)
   * ...
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Collision Resolution: Chaining
 * h("Pesho") = 4
@@ -98,10 +111,9 @@ h(k)
 * null
 * collision
 <div class="fragment balloon">Chaining elements in case of collision</div>
+* T
 
-```cs
-T
-```
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Hash Tables and Efficiency
@@ -115,9 +127,14 @@ T
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Dictionaries: .NET Interfaces and Implementations
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Hash Tables in C#
 ##  The Dictionary<TKey,TValue> Class
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Dictionary<TKey,TValue>
@@ -173,9 +190,13 @@ foreach (var pair in studentsMarks)
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Dictionary<TKey,TValue>
 ##  [Demo]()
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Counting the Words in a Text
@@ -198,9 +219,13 @@ foreach(var pair in wordsCount)
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Counting the Words in a Text
 ##  [Demo]()
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 * Data structures can be nested, e.g. dictionary of lists: `Dictionary<string, List<int>>`
@@ -223,9 +248,14 @@ private static void AddGrade(string name, int grade)
 # Dictionary of Lists
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Balanced Tree Dictionaries
 ##  The SortedDictionary<TKey,TValue> Class
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # SortedDictionary<TKey,TValue>
@@ -257,13 +287,20 @@ foreach(var pair in wordsCount)
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Counting the Words in a Text
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Comparing Dictionary Keys
 ##  Using custom key classes in Dictionary<TKey, TValue> and SortedDictionary<TKey,TValue>
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # IComparable<T>
@@ -295,6 +332,8 @@ public struct Point
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Implementing IComparable<T>
 
@@ -317,9 +356,14 @@ public struct Point : IComparable<Point>
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Sets
 ##  Sets of Elements
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Set and Bag ADTs
@@ -335,6 +379,8 @@ public struct Point : IComparable<Point>
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Sets: .NET Interfacesand Implementations
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # HashSet<T>
@@ -368,6 +414,8 @@ private static void PrintSet<T>(ISet<T> set)
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # SortedSet<T>
 * `SortedSet<T>` implements ADT `set` by balanced search tree (red-black tree)
@@ -388,6 +436,8 @@ PrintSet(union); // C# Java PHP SQL MySQL Oracle
 # HashSet<T> and SortedSet<T>
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Summary
 * Dictionaries map key to value
@@ -399,9 +449,13 @@ PrintSet(union); // C# Java PHP SQL MySQL Oracle
 * Sets hold a group of elements
   * Hash-table or balanced tree implementations
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Dictionaries, Hash Tables and Sets
 * http://academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Exercises
@@ -454,4 +508,6 @@ Bat Gancho              | Sofia    | 02 946 946 946
     * facebook.com/TelerikAcademy
   * Telerik Software Academy Forums
     * forums.academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 

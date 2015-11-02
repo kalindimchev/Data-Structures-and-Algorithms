@@ -1,9 +1,14 @@
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- section start -->
+<!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Trees and Traversals
 ##  Trees, Tre-Like Structures, Binary Search Trees,Balanced Trees, Tree Traversals, DFS and BFS
-* Data Structures and Algorithms
-* Telerik Software Academy
-* http://academy.telerik.com 
+<div class="signature">
+    <p class="signature-course">Data Structures and Algorithms</p>
+    <p class="signature-initiative">Telerik Software Academy</p>
+    <a href = "http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
+</div>
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
@@ -15,9 +20,14 @@
 * Balanced Search Trees
   * Balanced Trees in .NET
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Tree-like Data Structures
 ##  Trees, Balanced Trees, Graphs, Networks
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Tree-like Data Structures
@@ -29,6 +39,8 @@
   * `Trees`: binary, balanced, ordered, etc.
   * `Graphs`: directed / undirected, weighted, etc.
   * `Networks`
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Tree-like Data Structures
@@ -67,9 +79,12 @@
 * 10 (40)
 <div class="fragment balloon">Network</div>
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Trees and Related Terminology
 ##  Node, Edge, Root, Children, Parent, Leaf, Binary Search Tree, Balanced Tree
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Trees
@@ -125,9 +140,12 @@
 * 12
 * 25
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Implementing Trees
 ##  Recursive Tree Data Structure
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Recursive Tree Definition
@@ -196,6 +214,8 @@ public TreeNode<T> GetChild(int index)
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 * The class `Tree<T>` keeps tree's root node
 # Implementing Tree<T>
@@ -246,9 +266,12 @@ Tree<int> tree =
 * 12
 * Constructing a tree by nested constructors:
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Tree Traversals
 ##  DFS and BFS Traversals
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Tree Traversal Algorithms
@@ -260,6 +283,8 @@ Tree<int> tree =
   * `Breadth-First Search `(BFS)
     * Nearest nodes visited first
     * Implemented by a queue
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 * `Depth-First Search` first visits all descendants of given node recursively, finally visits the node itself
@@ -376,6 +401,8 @@ DFS(node)
 * 31
 * 1
 * 12
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # DFS in Action (Step 7)
@@ -651,6 +678,8 @@ BFS(node)
 * 1
 * 12
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # BFS in Action (Step 6)
 * Queue: `7`, `19`, `21`, `14`, `1`
@@ -880,9 +909,14 @@ DFS(node)
 # Trees and Traversals
 ##  [Demo]()
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Balanced Search Trees
 ##  AVL Trees, B-Trees, Red-Black Trees, AA-Trees
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Balanced Binary Search Trees
@@ -982,6 +1016,8 @@ DFS(node)
 # Trees and Traversals
 * http://academy.telerik.com
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Exercises
 * You are given a `tree of N nodes `represented as a set of N-1 pairs of nodes (parent node, child node), each in the range (0..N-1). Example:
@@ -1025,4 +1061,6 @@ DFS(node)
     * facebook.com/TelerikAcademy
   * Telerik Software Academy Forums
     * forums.academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 

@@ -1,5 +1,5 @@
 <!-- section start -->
-<!-- attr: { id:'title', class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'font-size:1em' } -->
+<!-- attr: { id:'', class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'font-size:1em' } -->
 # Linear Data Structures
 ## Arrays, Lists, Stacks, Queues Static and Dynamic Implementation
 

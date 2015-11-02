@@ -1,9 +1,12 @@
-<!-- attr: { class:'slide-section', showInPresentation:true, style:'' } -->
+<!-- section start -->
+<!-- attr: { class:'slide-title', showInPresentation:true, style:'' } -->
 # Dynamic Programming
 ##  Brief Introduction in Problem Solving using Dynamic Programming and Memoization
-* Telerik Software Academy
-* http://academy.telerik.com
-* Data Structures & Algorithms
+<div class="signature">
+    <p class="signature-course">Telerik Software Academy</p>
+    <p class="signature-initiative">http://academy.telerik.com</p>
+    <a href = "Data Structures & Algorithms" class="signature-link">Data Structures & Algorithms</a>
+</div>
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
@@ -14,8 +17,13 @@
 * Longest IncreasingSubsequence
 * Longest CommonSubsequence
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Minimum and Maximum
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Minimum and Maximum
@@ -52,8 +60,11 @@ int FindMax(int arr[])
 }
 ```
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Divide-and-Conquer
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Divide-and-Conquer
@@ -92,8 +103,13 @@ void MergeSort(int[] arr, int left, int right)
 * Fast multiplication
   * Strassen’s Matrix Multiplication
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Dynamic Programming
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Dynamic Programming
@@ -131,9 +147,12 @@ void MergeSort(int[] arr, int left, int right)
 * DP will solve each of them once and their answers are stored in a table for future use
   * Technique known as “memoization”
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Fibonacci Numbers
 ##  From "divide and conquer" to dynamic programming
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Fibonacci sequence
@@ -144,6 +163,8 @@ void MergeSort(int[] arr, int left, int right)
 * In mathematical terms:
   * Fn = Fn-1 + Fn-2
   * F0 = 0, F1 = 1
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Divide and Conquer Approach
@@ -159,6 +180,8 @@ decimal Fibonacci(int n)
 }
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Fibonacci and Memoization
 * We can save the results from each function call
@@ -168,10 +191,10 @@ decimal Fibonacci(int n)
 
 ```cs
 decimal Fibonacci(int n)
-{   if (memo[n] != 0) return memo[n];
+* {   if (memo[n] != 0) return memo[n];
    if (n == 0) return 0;
    if (n == 1) return 1;
-   memo[n] = Fibonacci(n - 1) + Fibonacci(n - 2);
+*    memo[n] = Fibonacci(n - 1) + Fibonacci(n - 2);
    return memo[n];
 }
 ```
@@ -194,8 +217,11 @@ decimal Fibonacci(int n)
     * Recurrent solution takes ~48 315 633 steps
     * Dynamic programming solution takes ~36 steps
 
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Moving Problem
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Moving Problem
@@ -204,8 +230,13 @@ decimal Fibonacci(int n)
 * You can move only right and down
 * Some cells are unreachable
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Subset Sum Problem
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Subset Sum Problems
@@ -213,6 +244,8 @@ decimal Fibonacci(int n)
 * Given a set of integers and an integer S, does any non-empty subset sum to S?
 * Given a set of integers,find all possible sums
 * Can you equally separatethe value of coins?
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Subset Sum Problem
@@ -262,8 +295,13 @@ decimal Fibonacci(int n)
 *     if (possible[i+OFFSET] == 1) cout << " " << i;
 * }
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Longest Increasing Subsequence
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Longest Increasing Subsequence
@@ -305,14 +343,21 @@ decimal Fibonacci(int n)
 * }
 * cout << endl;
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
+<!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Longest Common Subsequence 
 ##  Recursive and DP Approach
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Longest Common Subsequence
 * Given two sequences x[1 . . m] and y[1 . . n], find a longest common subsequence (LCS) to them both
 * For example if we have x = "ABCBDAB" andy = "BDCABA" their longest common subsequence will be "BCBA"
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # LCS – Recursive Approach
@@ -340,6 +385,8 @@ decimal Fibonacci(int n)
 # Initial LCS table
 * To compute the LCS efficiently using dynamic programming we start by constructing a table in which we build up partial results
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Initial LCS table (2)
 * We'll fill up the table from top to bottom, and from left to right
@@ -347,6 +394,8 @@ decimal Fibonacci(int n)
 * Each cell will contain a solution to a sub-problem of theoriginal problem
   * S1 = GCCCTAGCG
   * S2 = GCGCAATG
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # LCS table – base cases filled in
@@ -362,6 +411,8 @@ for (i=0; i<=m; i++){
     c[0][i] = 0;}
 ```
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # LCS – C++ Code Solution
 * int LCS(string X, string Y){
@@ -375,6 +426,8 @@ for (i=0; i<=m; i++){
 *                 c[i][j] = max(c[i][j-1], c[i-1][j]);            }
 *         }    }    return c[m][n];
 * }
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # LCS – Reconstruct the Answer
@@ -396,6 +449,8 @@ for (i=0; i<=m; i++){
 *     }
 * }
 
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # DP Applications
 * Areas
@@ -407,6 +462,8 @@ for (i=0; i<=m; i++){
     * Theory
     * Graphics
     * AI
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Some Famous Dynamic Programming Algorithms
@@ -464,4 +521,6 @@ for (i=0; i<=m; i++){
     * facebook.com/TelerikAcademy
   * Telerik Software Academy Forums
     * forums.academy.telerik.com
+
+<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
