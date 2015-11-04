@@ -15,12 +15,12 @@
 
 ### Week 2
 
-| #   | Title                                                   | Time  | Date             | Trainer |
-| --- | ------------------------------------------------------- | ----- | :--------------: | ------- |
-| 6   | Advanced Data Structures                                | 18:00 | Mon (2-Nov-2015) | Ivo     |
-| 7   | Data structures efficency                               | 20:00 | Mon (2-Nov-2015) | Ivo     |
-| 8   | Recursion                                               | 10:30 | Wed (4-Nov-2015) | Evlogi  |
-| 9   | **Workshop** on recursion and data structures efficency | 14:00 | Fri (6-Nov-2015) | Cuki    |
+| #   | Title                                                   | Time  | Date             | Trainer           |
+| --- | ------------------------------------------------------- | ----- | :--------------: | ----------------- |
+| 6   | Advanced Data Structures                                | 18:00 | Mon (2-Nov-2015) | Ivo               |
+| 7   | Data structures efficency                               | 20:00 | Mon (2-Nov-2015) | Ivo               |
+| 8   | Recursion                                               | 10:30 | Wed (4-Nov-2015) | Evlogi            |
+| 9   | **Workshop** on recursion and data structures efficency | 10:30 | Fri (6-Nov-2015) | Cuki & Zdravko    |
 
 ### Week 3
 
