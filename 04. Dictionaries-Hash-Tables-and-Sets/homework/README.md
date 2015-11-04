@@ -14,7 +14,7 @@
 
 3. Write a program that counts how many times each word from given text file `words.txt` appears in it. The character casing differences should be ignored. The result words should be ordered by their number of occurrences in the text. Example:
 
-    `This is the TEXT. Text, text, text – THIS TEXT! Is this the text?`
+    `This is the TEXT. Text, text, text â€“ THIS TEXT! Is this the text?`
 
 	>is -> 2
     
@@ -45,8 +45,8 @@
     * `Remove(T)`
     * `Count`
     * `Clear()`
-    * union and
-    * intersect
+    * `union and`
+    * `intersect`
     
     Write unit tests for your class.
     
@@ -61,5 +61,5 @@
 
 	Duplicates can occur in people names, towns and phone numbers. Write a program to read the phones file and execute a sequence of commands given in the file `commands.txt`:
 
-    * `find(name)` – display all matching records by given name (first, middle, last or nickname)
-    * `find(name, town)` – display all matching records by given name and town
+    * `find(name)` â€“ display all matching records by given name (first, middle, last or nickname)
+    * `find(name, town)` â€“ display all matching records by given name and town
