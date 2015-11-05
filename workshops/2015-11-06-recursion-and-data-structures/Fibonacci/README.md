@@ -2,9 +2,11 @@
 
 ## Description
 We all know what are fibonacci numbers.
+
 * F<sub>1</sub> = 1
 * F<sub>2</sub> = 1
 * F<sub>i</sub> = F<sub>i-1</sub> + F<sub>i-2</sub>
+
 Your task is to find F<sub>N</sub> for a given **N**. Because that number can be very big you only have to find it modulo **1 000 000 007**.
 
 ## Input
