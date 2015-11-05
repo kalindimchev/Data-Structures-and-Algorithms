@@ -21,7 +21,7 @@ On the only line of the output print the maximum height of a tower that can be b
 ## Constraints
 * 1 <= **N** <= 15
 * 1 <= **X**, **Y**, **Z** <= 10 000 000
-* Time limit: **0.2 секунди**
+* Time limit: **0.2 seconds**
 * Memory limit: **64 MB**
 
 ## Examples
