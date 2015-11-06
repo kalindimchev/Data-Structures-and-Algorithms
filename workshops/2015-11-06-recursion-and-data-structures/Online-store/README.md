@@ -33,7 +33,7 @@ Output data should be printed on the console.
 * **N** is in the interval **[1, 100050]**
 * Each command is consisted of letters, numbers and spaces
 * Prices are given as real numbers with **atmost two digits of decimal precision** (eg. 133.58 or 320)
-* The '.' symbol is used as a decimal seperator
+* The `'.'` symbol is used as a decimal seperator
 * Prices must be outputed with **exactly two digits of decimal precision** (eg. 320.30, 100.00, 42.42; ~~320.3~~ is wrong)
 * Time limit: **2 seconds**
 * Memory limit: **256 MB**
