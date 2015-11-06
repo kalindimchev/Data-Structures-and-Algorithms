@@ -31,10 +31,10 @@ Output data should be printed on the console.
 ## Constraints
 
 * **N** is in the interval **[1, 100050]**
-* Всяка дума в командите (например: име на продукт или производител) се състои от букви, цифри и интервали.
-* Цените са дадени като реални числа с най-много две цифри зад десетичната запетая, (например: 133.58 или 320)
-* Символът ‘.’ се използва като десетичен разделител.
-* Цените трябва да бъдат отпечатани с точно две цифри зад десетичната запетая (например: 320.30, а не 320.3 - този формат е грешен)
+* Each command is consisted of letters, numbers and spaces
+* Prices are given as real numbers with **atmost two digits of decimal precision** (eg. 133.58 or 320)
+* The '.' symbol is used as a decimal seperator
+* Prices must be outputed with **exactly two digits of decimal precision** (eg. 320.30, 100.00, 42.42; ~~320.3~~ is wrong)
 * Time limit: **2 seconds**
 * Memory limit: **256 MB**
 
