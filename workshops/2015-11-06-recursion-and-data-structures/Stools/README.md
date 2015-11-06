@@ -10,13 +10,13 @@ Timmy can rotate stools as he wishes. Each stool can be the basis of the tower. 
 Help Timmy to calculate what is **the maximum height of a tower** that can be build with available stools.
 
 ## Input
-Input data is read from the console.<br>
-On the first line there will be a natural number **N** - the number of Timmy's stools.<br>
-On the next **N** lines there will be 3 natural numbers on each line - the dimensions of each stool.
+Input data is read from the console.
+* On the first line there will be a natural number **N** - the number of Timmy's stools.
+* On the next **N** lines there will be 3 natural numbers on each line - the dimensions of each stool.
 
 ## Output
-Output data should be printed on the console.<br>
-On the only line of the output print the maximum height of a tower that can be build.
+Output data should be printed on the console.
+* On the only line of the output print the maximum height of a tower that can be build.
 
 ## Constraints
 * 1 <= **N** <= 15
