@@ -275,7 +275,7 @@ class PriorityQueue<T> where T : IComparable<T>
   * Efficient double-ended priority queue
 
 <!-- section start -->
-<!-- attr: {id: 'questions', class: 'slide-section'} -->
+<!-- attr: { id:'questions', class:'slide-section' } -->
 # Questions
 ## Advanced Data Structures
 [link to Telerik Academy Furum](https://telerikacademy.com/Forum/Category/15/data-structures-algorithms)
