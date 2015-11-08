@@ -21,7 +21,7 @@ Joro and Gosho are padawans. They want to have as much time with the Force as th
 
 ##  Input
 
-*  Use the standart input (i.e. the console)
+*  Use the standard input (i.e. the console)
 *  On the first line you will find the number **N** - the number of jedi, waiting for meditation
 *  On the second line you will fin exactly **N** jedi, waiting for meditation:
    *  **M** means jedi master
@@ -30,7 +30,7 @@ Joro and Gosho are padawans. They want to have as much time with the Force as th
 
 ##  Output 
 
-*  Use the standart output (i.e. the console)
+*  Use the standard output (i.e. the console)
 *  On the only line, print the correct sequence of jedi, ready for meditation
    *  Print each jedi's name
    *  Different jedi's are separated by a single space
