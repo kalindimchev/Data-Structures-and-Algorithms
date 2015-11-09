@@ -67,6 +67,8 @@
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Recursive Binary Search
 
+* _Example:_ Recursive binary search
+
 ```cs
 function binarySearch(int items[], int key, int from, int to)
   if (to < from):
@@ -88,12 +90,13 @@ function binarySearch(int items[], int key, int from, int to)
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Iterative Binary Search
 
+* _Example:_ Iterative binary search
 ```cs
 int binarySearch(int a[], int key, int from, int to)
   // continue searching while [imin,imax] is not empty
   while (from <= to):
     //calculate the midpoint for roughly equal partition x/
-    int middle = midpoint(imin, imax);
+    int middle = midpoint(from, to);
     // determine which subarray to search
     if (a[middle] < key)
       // change from index to search upper subarray
@@ -104,10 +107,14 @@ int binarySearch(int a[], int key, int from, int to)
     else
       // key found at index middle
       return middle;
-  }
   return KEY_NOT_FOUND;
-}
 ```
+
+<!-- attr: {class: 'slide-section'} -->
+
+<!-- section start -->
+
+# Interpolation Search
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Interpolation Search
@@ -130,7 +137,7 @@ public int interpolationSearch(int[] sortedArray, int toFind){
   while(sortedArray[low] <= toFind && sortedArray[high] >= toFind) {
     mid = low + ((toFind - sortedArray[low]) x (high - low)) /
                 (sortedArray[high] - sortedArray[low]);
-                // out of range is possible here
+                // out of range   is possible here
     if (sortedArray[mid] < toFind)
       low = mid + 1;
     else if (sortedArray[mid] > toFind)
