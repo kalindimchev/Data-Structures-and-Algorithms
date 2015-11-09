@@ -114,6 +114,7 @@ int binarySearch(int a[], int key, int from, int to)
 
 <!-- section start -->
 
+<!-- attr: {class: 'slide-section'} -->
 # Interpolation Search
 
 <!-- attr: { showInPresentation:true, style:'' } -->
