@@ -497,22 +497,3 @@
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Combinatorics
 * http://algoacademy.telerik.com
-
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Exercises
-* Solve 2 problems by choice from Algo Academy (October 2012 – Combinatorics): http://academy.telerik.com/algoacademy/season-2012-2013/training-27-28-Oct-2012-combinatorics
-* You may test your solutions in BG Coder: http://bgcoder.com/Contest/Practice/59
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Free Trainings @ Telerik Academy
-* C# Programming @ Telerik Academy
-    * csharpfundamentals.telerik.com
-  * Telerik Software Academy
-    * academy.telerik.com
-  * Telerik Academy @ Facebook
-    * facebook.com/TelerikAcademy
-  * Telerik Software Academy Forums
-    * forums.academy.telerik.com
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
