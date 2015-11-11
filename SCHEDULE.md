@@ -50,7 +50,7 @@
 | 21  | Regular expressions                  | 14:00 | Tue (24-Nov-2015) | Cuki        |
 | 22  | Computational geometry               | 10:30 | Wed (25-Nov-2015) | Doncho      |
 | 23  | Greedy algorithms                    | 10:30 | Wed (25-Nov-2015) | Doncho      |
-| 24  | **Workshop** on strings and geometry | 14:00 | Fri (27-Nov-2015) | Cuki        |
+| 24  | **Workshop** on strings and geometry | 10:30 | Fri (27-Nov-2015) | Cuki        |
 
 ### Week 6
 
