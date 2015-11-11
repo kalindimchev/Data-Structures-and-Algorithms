@@ -1,6 +1,6 @@
 <!-- section start -->
 <!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Sorting andSearching Algorithms
+# Searching Algorithms
 <div class="signature">
     <p class="signature-course">Data Structures and Algorithms</p>
     <p class="signature-initiative">Telerik Software Academy</p>
@@ -23,7 +23,7 @@
 
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Search Algorithm 
+# Search Algorithm
 * An algorithm for finding an item with specified properties among a collection of items
 * Different types of searching algorithms
   * For virtual search spaces
@@ -34,10 +34,9 @@
   * Search for the max (min) of a function
   * etc.
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Linear Search
+
 * Method for finding a particular value in a list
   * Checking every one of the elements
   * One at a time in sequence
@@ -47,72 +46,76 @@
 ```cs
  for each item in the list:
      if that item has the desired value,
-         stop the search and return the item's location.
+         stop the search and return the location.
  return nothing.
 ```
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+<!-- section start -->
+
+<!-- attr: {class: 'slide-section'} -->
+# Binary search
+##  Searching in an ordered collection
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Binary Search
-* Finds the position of a specified value within a `sorted` data structure
+
+* Finds the position of a specified value within an **ordered** data structure
 * In each step, compare the input with the middle
   * The algorithm repeats its action to the left or right sub-structure
 * Average performance: `O(log(n))`
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Recursive Binary Search
 
+* _Example:_ Recursive binary search
+
 ```cs
-int binary_search(int A[], int key, int imin, int imax)
-{
-  if (imax < imin)
-*      // set is empty, so return value showing not found
-     return KEY_NOT_FOUND;
-  else
-  {
-*      // calculate midpoint to cut set in half
-     int imid = midpoint(imin, imax);
-     if (A[imid] > key)
-*         // key is in lower subset
-        return binary_search(A, key, imin, imid-1);
-     else if (A[imid] < key)
-*         // key is in upper subset
-        return binary_search(A, key, imid+1, imax);
-     else
-*         // key has been found
-        return imid;
-  }
-}
+function binarySearch(int items[], int key, int from, int to)
+  if (to < from):
+    // set is empty, so return value showing not found
+    return KEY_NOT_FOUND;
+  // calculate midpoint to cut set in half
+  int middle = midpoint(from, to);
+  if (a[middle] > key):
+    // key is in lower subset
+    return binarySearch(a, key, from, middle - 1);
+  else if (a[middle] < key):
+    // key is in upper subset
+    return binarySearch(a, key, middle + 1, to);
+  else:
+    // key has been found
+    return middle;
 ```
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Iterative Binary Search
 
+* _Example:_ Iterative binary search
 ```cs
-int binary_search(int A[], int key, int imin, int imax)
-{
-*    // continue searching while [imin,imax] is not empty
-   while (imax >= imin)
-   {
-*       /x calculate the midpoint for roughly equal partition x/
-      int imid = midpoint(imin, imax);
-*       // determine which subarray to search
-      if (A[imid] < key)
-*          // change min index to search upper subarray
-         imin = imid + 1;
-      else if (A[imid] > key)
-*          // change max index to search lower subarray
-         imax = imid - 1;
-      else
-*          // key found at index imid
-         return imid;
-  }
+int binarySearch(int a[], int key, int from, int to)
+  // continue searching while [imin,imax] is not empty
+  while (from <= to):
+    //calculate the midpoint for roughly equal partition x/
+    int middle = midpoint(from, to);
+    // determine which subarray to search
+    if (a[middle] < key)
+      // change from index to search upper subarray
+       from = middle + 1;
+    else if (a[middle] > key)
+      // change to index to search lower subarray
+       to = middle - 1
+    else
+      // key found at index middle
+      return middle;
   return KEY_NOT_FOUND;
-}
 ```
+
+<!-- attr: {class: 'slide-section'} -->
+
+<!-- section start -->
+
+<!-- attr: {class: 'slide-section'} -->
+# Interpolation Search
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Interpolation Search
@@ -128,14 +131,14 @@ int binary_search(int A[], int key, int imin, int imax)
 
 ```cs
 public int interpolationSearch(int[] sortedArray, int toFind){
-*   // Returns index of toFind in sortedArray, or -1 if not found
+  // Returns index of toFind in sortedArray, or -1 if not found
   int low = 0;
   int high = sortedArray.length - 1;
   int mid;
   while(sortedArray[low] <= toFind && sortedArray[high] >= toFind) {
     mid = low + ((toFind - sortedArray[low]) x (high - low)) /
                 (sortedArray[high] - sortedArray[low]);
-*                 // out of range is possible here
+                // out of range   is possible here
     if (sortedArray[mid] < toFind)
       low = mid + 1;
     else if (sortedArray[mid] > toFind)
@@ -144,7 +147,7 @@ public int interpolationSearch(int[] sortedArray, int toFind){
       return mid;
   }
   if (sortedArray[low] == toFind) return low;
-*   else return -1; // Not found
+    else return -1; // Not found
 }
 ```
 
@@ -152,15 +155,11 @@ public int interpolationSearch(int[] sortedArray, int toFind){
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Shuffling
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Shuffling
 * A procedure used to randomize the order of items in a collection
   * Generating random permutation
 * http://en.wikipedia.org/wiki/Shuffling
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Fisher–Yates shuffle algorithm
