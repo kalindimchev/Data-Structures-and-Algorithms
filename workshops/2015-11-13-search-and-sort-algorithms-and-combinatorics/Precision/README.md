@@ -4,7 +4,7 @@
 
 I don't know about you, but most programmers hate many mathematical constants. Typically, because they are very long. Fractions, on the other hand, are far easier to remember and give good enough precision. For example isn't it easier to memorize `pi` as the fraction `22/7` instead of `3.14159265358979323846264338327`? The potential problem in this case is the precision is only 2 digts. A better example is `355/133` which has 6 digits of precision.
 
-Working with infinite decimals - not fun. That is why you should think of a good method to find aproximations. Your task is set strictly at less than 1 positive decimal **Number** and maximum denominator **MaxDenominator** to find the most accurate fraction:
+Working with infinite decimals - not fun. That is why you should think of a good method to find aproximations. Your task is set at a positive decimal **Number** strictly less than 1 and a maximum denominator **MaxDenominator** to find the most accurate fraction:
 * We have **Fraction = Nominator / Denominator** where **0 <= Nominator < Denominator**
 * Let **Decimal** be the decimal representation of **Fraction**
 * Let **Digits** be the number of decimal places in **Number**
