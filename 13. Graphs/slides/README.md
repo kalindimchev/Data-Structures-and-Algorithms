@@ -5,46 +5,28 @@
 <div class="signature">
     <p class="signature-course">Data Structures and Algorithms</p>
     <p class="signature-initiative">Telerik Software Academy</p>
-    <a href = "http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
+    <a href="http://academy.telerik.com " class="signature-link">http://academy.telerik.com </a>
 </div>
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
 * Graph Definitions and Terminology
-* Representing Graphs 
-* Graph Traversal Algorithms
-* Connectivity
-* Dijkstra’s Algorithm
-* Topological sorting
-* Prim and Kruskal
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+* Representing Graphs
 
 <!-- section start -->
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { class:'slide-section', showInPresentation:true, style:'' } -->
 # Graphs
 ##  Definitions and Terminology
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Graph Data Structure
 * Set of nodes with many-to-many relationship between them is called `graph`
   * Each node has `multiple` predecessors
   * Each node has `multiple` successors
-* 7
-* 19
-* 21
-* 14
-* 1
-* 12
-* 31
-* 4
-* 11
-<div class="fragment balloon">Node with multiple predecessors</div>
-<div class="fragment balloon">Node with multiple successors</div>
+
+<img class="slide-image" src="imgs/graph.png" style="position:initial; width:50%; margin:10% 20%" />
+<div class="fragment balloon" style="width:210px; top:50%; left:15%">Node with multiple predecessors</div>
+<div class="fragment balloon" style="width:120px; top:47%; left:60%">Node with multiple successors</div>
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Graph Definitions
@@ -57,63 +39,30 @@
   * Can be directed / undirected
   * Can be weighted / unweighted
   * Can have name / value
-* A
-<div class="fragment balloon">Node</div>
-* A
-<div class="fragment balloon">Edge</div>
-* B
 
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Graph Definitions (2)
+<img class="slide-image" src="imgs/node.png" style="top:15%; right:15%" />
+<div class="fragment balloon" style="width:60px; top:20%; right:5%">Node</div>
+
+<img class="slide-image" src="imgs/edge.png" style="height:15%; top:50%; right:0%" />
+<div class="fragment balloon" style="width:60px; top:50%; right:10%">Edge</div>
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Graph Definitions -->
 * `Directed graph`
   * Edges have direction
 * `Undirected graph`
   * Undirected edges
-* 7
-* 19
-* 21
-* 1
-* 12
-* 4
-* 3
-* 22
-* 2
-* 3
-* G
-* J
-* F
-* D
-* A
-* E
-* C
-* H
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/directed-graph.png" style="top:15%; right:15%" />
+<img class="slide-image" src="imgs/undirected-graph.png" style="top:15%; right:15%" />
+
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Graph Definitions (3)
 * `Weighted graph`
   * Weight (cost) is associated with each edge
-* G
-* J
-* F
-* D
-* A
-* E
-* C
-* H
-* Q
-* K
-* N
-* 10
-* 4
-* 14
-* 6
-* 16
-* 9
-* 8
-* 7
-* 5
-* 22
-* 3
+
+<img class="slide-image" src="imgs/weighted-graph.png" style="top:15%; right:15%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Graph Definitions (4)
