@@ -502,235 +502,104 @@ function visit(node n)
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Kruskal’s Algorithm
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Kruskal’s Algorithm
 * The graph may not be connected
   * If the graph is not connected – minimum spanning forest
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Kruskal’s Algorithm
 * Create forest F (each tree is a vertex)
 * Set S – all edges in the graph
-* While S if nonempty and F is not spanning
+* While S is not empty and F is not spanning
   * Remove edge with min cost from S
   * If that edge connects two different trees – add it to the forest (these two trees are now a single tree)
   * Else discard the edge
 * The graph may not be connected
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+# Kruskal’s Algorithm
 * We build a forest containing all vertices from the graph
 * We sort all edges 
 * Edges are – 2, 4, 5, 7, 8, 9, 12, 20
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/kruskal1.png" style="width:50%; top:55%; left:25%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 * At every step we select the edge with the smallest weight and remove it from the list with edges
 * If it connects two different trees from the forest we add it and connect these trees
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/kruskal1.png" style="width:50%; top:55%; left:25%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 * We select the edge 2
 * This edge connects the vertices B and D (they are in different trees)
 * We add it
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/kruskal2.png" style="width:50%; top:55%; left:25%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 * We select the edge 4 
 * This edge connects the vertices A and B (they are different trees)
 * We add it
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/kruskal3.png" style="width:50%; top:55%; left:25%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 * We select the edge 5
 * This edge connects the vertices A and C (they are different trees)
 * We add it
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/kruskal4.png" style="width:50%; top:55%; left:25%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 * We select the edge 7
 * This edge connects the vertices C and E (they are different trees)
 * We add it
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/kruskal5.png" style="width:50%; top:55%; left:25%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 * We select the edge 8
 * This edge connects the vertices E and D (they are not different trees)
 * We don’t add it
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/kruskal6.png" style="width:50%; top:55%; left:25%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 * We select the edge 9
 * This edge connects the vertices A and D (they are not different trees)
 * We don’t add it
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/kruskal7.png" style="width:50%; top:55%; left:25%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 * We select the edge 12
 * This edge connects the vertices E and F (they are not different trees)
 * We add it
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<img class="slide-image" src="imgs/kruskal8.png" style="width:50%; top:55%; left:25%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 * We can have a function that checks at every step if all vertices are connected and the tree that we build is spanning
 * If we have such function we stop
 * Otherwise we check for the other edges
   * We just won’t add them to the tree
-* 4
-* 2
-* 9
-* 12
-* 8
-* 7
-* 5
-* A
-* B
-* C
-* D
-* E
-* F
-* 20
-# Kruskal’s Algorithm
 
-<!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
-# Kruskal
+<img class="slide-image" src="imgs/kruskal8.png" style="width:45%; top:60%; left:30%" />
+
+<!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- # Kruskal’s Algorithm -->
 ##  [Demo]()
-
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Exercises
-* Solve these problems from BGCoder:
-  * Algo Academy March 2012 – Problem 05 – Friends of Pesho
-  * Algo Academy February 2013 – Problem 04 – Salaries
-* You are given a cable TV company. The company needs to lay cable to a new neighborhood (for every house). If it is constrained to bury the cable only along certain paths, then there would be a graph representing which points are connected by those paths. But the cost of some of the paths is more expensive because they are longer. If every house is a node and every path from house to house is an edge, find a way to minimize the cost for cables.
 
 
 <!-- section start -->
