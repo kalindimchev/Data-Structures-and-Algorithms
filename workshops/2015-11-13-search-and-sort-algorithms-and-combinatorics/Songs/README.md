@@ -21,6 +21,7 @@ Write a program that finds the number of pairs of songs for which Ivancho's rank
   * The number of inversions on a single line
 
 ## Constraints
+* 1 <= **N** <= 100 000
 * Time limit: **0.1 seconds**
 * Memory limit: **32 MiB**
 
