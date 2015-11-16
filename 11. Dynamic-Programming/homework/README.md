@@ -12,6 +12,7 @@
       * nuts + whiskey
       * weight = 9
       * cost = 17
+
 2. Write a program to calculate the "`Minimum Edit Distance`" (MED) between two words. `MED(x, y)` is the minimal sum of costs of edit operations used to transform `x` to `y`.
   * _Sample costs_:
       * cost (replace a letter) = 1
@@ -22,3 +23,5 @@
       * delete ‘d’:  "developer" &rarr; "eveloper", cost = 0.9
       * insert ‘n’:  "eveloper" &rarr; "enveloper", cost = 0.8
       * replace ‘r’ &rarr; ‘d’:  "enveloper" &rarr; "enveloped", cost = 1
+
+3. Select and solve at least **3 problems from Telerik Algo Academy April 2012**: http://bgcoder.com/Contests/123/Telerik-Algo-Academy-April-2012
