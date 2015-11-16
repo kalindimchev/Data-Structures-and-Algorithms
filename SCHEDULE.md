@@ -56,7 +56,7 @@
 
 | #   | Title                | Time  | Date              | Trainer |
 | --- | -------------------- | ------| :---------------: | ------- |
-| 25  | **Exam Preparation** | 10:30 | Mon (29-Nov-2015) | all     |
-| 26  | **Teamwork Defense** | 10:30 | Wed (1-Dec-2015)  | all     |
-| 27  | **Practical Exam**   | 10:30 | Fri (4-Dec-2015)  | all     |
+| 25  | **Exam Preparation** | 10:30 | Mon (30-Nov-2015) | all     |
+| 26  | **Practical Exam**   | 10:30 | Fri (4-Dec-2015)  | all     |
+| 27  | **Teamwork Defense** | 10:30 | Wed (7-Dec-2015)  | all     |
 
