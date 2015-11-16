@@ -5,45 +5,45 @@ public static class LongestIncreasingSubsequenceRecursive
 {
     private const int NoPrevious = -1;
 
-    private static int[] arr = { 3, 4, 8, 1, 2, 4, 32, 6, 2, 5, 33, 4, 38, 22 };
+    private static readonly int[] Sequence = { 3, 4, 8, 1, 2, 4, 32, 6, 2, 5, 33, 4, 38, 22 };
 
-    private static int[] lis = new int[arr.Length];
+    private static int[] lis = new int[Sequence.Length];
 
-    private static int[] back = new int[arr.Length];
+    private static int[] back = new int[Sequence.Length];
 
     public static void Main()
     {
-        for (var i = 0; i < arr.Length; i++)
+        for (var i = 0; i < Sequence.Length; i++)
         {
             back[i] = NoPrevious;
         }
 
-        for (var i = 0; i < arr.Length; i++)
+        for (var i = 0; i < Sequence.Length; i++)
         {
             CalcLongestIncreasingSubsequence(i);
         }
 
-        Console.WriteLine("arr = " + string.Join(", ", arr));
+        Console.WriteLine("Sequence = " + string.Join(", ", Sequence));
         Console.WriteLine("lis = " + string.Join(", ", lis));
         Console.WriteLine("back = " + string.Join(", ", back));
 
-        var maxElementIndex = FindMaxElementIndex(arr);
+        var maxElementIndex = FindMaxElementIndex(Sequence);
 
-        PrintLongestIncreasingSubsequence(arr, back, maxElementIndex);
+        PrintLongestIncreasingSubsequence(Sequence, back, maxElementIndex);
     }
 
     private static void CalcLongestIncreasingSubsequence(int k)
     {
         if (lis[k] > 0)
         {
-            // memoization
+            // Memoization (https://en.wikipedia.org/wiki/Memoization)
             return;
         }
 
         lis[k] = 1;
         for (var i = 0; i <= k - 1; i++)
         {
-            if (arr[i] < arr[k])
+            if (Sequence[i] < Sequence[k])
             {
                 CalcLongestIncreasingSubsequence(i);
                 if (lis[i] + 1 > lis[k])
@@ -55,15 +55,15 @@ public static class LongestIncreasingSubsequenceRecursive
         }
     }
 
-    private static int FindMaxElementIndex(int[] arr)
+    private static int FindMaxElementIndex(int[] sequence)
     {
-        var maxElement = arr[0];
+        var maxElement = sequence[0];
         var maxElementIndex = 0;
-        for (var i = 0; i < arr.Length; i++)
+        for (var i = 0; i < sequence.Length; i++)
         {
-            if (arr[i] > maxElement)
+            if (sequence[i] > maxElement)
             {
-                maxElement = arr[i];
+                maxElement = sequence[i];
                 maxElementIndex = i;
             }
         }
@@ -71,13 +71,13 @@ public static class LongestIncreasingSubsequenceRecursive
         return maxElementIndex;
     }
 
-    private static void PrintLongestIncreasingSubsequence(int[] arr, int[] back, int index)
+    private static void PrintLongestIncreasingSubsequence(int[] sequence, int[] back, int maxElementIndex)
     {
         var lis = new List<int>();
-        while (index != NoPrevious)
+        while (maxElementIndex != NoPrevious)
         {
-            lis.Add(arr[index]);
-            index = back[index];
+            lis.Add(sequence[maxElementIndex]);
+            maxElementIndex = back[maxElementIndex];
         }
 
         lis.Reverse();

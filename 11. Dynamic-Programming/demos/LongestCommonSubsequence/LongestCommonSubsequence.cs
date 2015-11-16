@@ -5,68 +5,66 @@ public static class LongestCommonSubsequence
 {
     private const int NotCalculated = -1;
 
-    private static string firstStr = "xabcxxxx";
+    private const string FirstString = "xabcdxxxx";
 
-    private static string secondStr = "abcxxyxabcx";
+    private const string SecondString = "abczxxyxabcx";
 
-    private static int[,] lcs = new int[firstStr.Length, secondStr.Length];
+    private static readonly int[,] LcsArray = new int[FirstString.Length, SecondString.Length];
 
     public static void Main()
     {
         InitializeArray();
-
-        CalcLCS(firstStr.Length - 1, secondStr.Length - 1);
-
-        PrintLCS(firstStr.Length - 1, secondStr.Length - 1);
+        CalculateLongestCommonSubsequence(FirstString.Length - 1, SecondString.Length - 1);
+        PrintLongestCommonSubsequence(FirstString.Length - 1, SecondString.Length - 1);
     }
 
     private static void InitializeArray()
     {
-        for (var x = 0; x < firstStr.Length; x++)
+        for (var x = 0; x < FirstString.Length; x++)
         {
-            for (var y = 0; y < secondStr.Length; y++)
+            for (var y = 0; y < SecondString.Length; y++)
             {
-                lcs[x, y] = NotCalculated;
+                LcsArray[x, y] = NotCalculated;
             }
         }
     }
 
-    private static int CalcLCS(int x, int y)
+    private static int CalculateLongestCommonSubsequence(int x, int y)
     {
         if (x < 0 || y < 0)
         {
             return 0;
         }
 
-        if (lcs[x, y] == NotCalculated)
+        if (LcsArray[x, y] == NotCalculated)
         {
-            var lcsFirstMinusOne = CalcLCS(x - 1, y);
-            var lcsSecondMinusOne = CalcLCS(x, y - 1);
-            lcs[x, y] = Math.Max(lcsFirstMinusOne, lcsSecondMinusOne);
-            if (firstStr[x] == secondStr[y])
+            var lcsFirstMinusOne = CalculateLongestCommonSubsequence(x - 1, y);
+            var lcsSecondMinusOne = CalculateLongestCommonSubsequence(x, y - 1);
+            LcsArray[x, y] = Math.Max(lcsFirstMinusOne, lcsSecondMinusOne);
+            if (FirstString[x] == SecondString[y])
             {
-                var lcsBothMinusOne = 1 + CalcLCS(x - 1, y - 1);
-                lcs[x, y] = Math.Max(lcs[x, y], lcsBothMinusOne);
+                var lcsBothMinusOne = 1 + CalculateLongestCommonSubsequence(x - 1, y - 1);
+                LcsArray[x, y] = Math.Max(LcsArray[x, y], lcsBothMinusOne);
             }
         }
 
-        return lcs[x, y];
+        return LcsArray[x, y];
     }
 
-    private static void PrintLCS(int x, int y)
+    private static void PrintLongestCommonSubsequence(int x, int y)
     {
-        Console.WriteLine("LCS = " + CalcLCS(x, y));
+        Console.WriteLine("LCS = " + CalculateLongestCommonSubsequence(x, y));
 
         var lcsLetters = new List<char>();
         while (x >= 0 && y >= 0)
         {
-            if ((firstStr[x] == secondStr[y]) && (CalcLCS(x - 1, y - 1) + 1 == lcs[x, y]))
+            if ((FirstString[x] == SecondString[y]) && (CalculateLongestCommonSubsequence(x - 1, y - 1) + 1 == LcsArray[x, y]))
             {
-                lcsLetters.Add(firstStr[x]);
+                lcsLetters.Add(FirstString[x]);
                 x--;
                 y--;
             }
-            else if (CalcLCS(x - 1, y) == lcs[x, y])
+            else if (CalculateLongestCommonSubsequence(x - 1, y) == LcsArray[x, y])
             {
                 x--;
             }

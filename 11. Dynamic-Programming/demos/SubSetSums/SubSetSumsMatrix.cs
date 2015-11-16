@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 public static class SubSetSums
 {
-    private static int[] arr = { 5, 5, 15, 20, 1 };
+    private const int SumToAchieve = 26;
 
-    private static int sum = 26;
+    private static readonly int[] Number = { 5, 5, 15, 20, 1 };
 
-    private static bool[,] f = new bool[arr.Length, sum + 1];
+    private static readonly bool[,] Sums = new bool[Number.Length, SumToAchieve + 1];
 
-    private static bool[,] isCalculated = new bool[arr.Length, sum + 1];
+    private static readonly bool[,] IsCalculated = new bool[Number.Length, SumToAchieve + 1];
 
     public static void Main()
     {
-        var isSumPossible = CalcF(arr.Length - 1, sum);
+        var isSumPossible = CalcF(Number.Length - 1, SumToAchieve);
         if (isSumPossible)
         {
-            PrintSubset(arr.Length - 1, sum);
+            PrintSubset(Number.Length - 1, SumToAchieve);
         }
         else
         {
@@ -24,20 +24,20 @@ public static class SubSetSums
         }
     }
 
-    private static bool CalcF(int i, int sum)
+    private static bool CalcF(int i, int currentSum)
     {
-        if (sum < 0 || i < 0)
+        if (currentSum < 0 || i < 0)
         {
             return false;
         }
 
-        if (!isCalculated[i, sum])
+        if (!IsCalculated[i, currentSum])
         {
-            f[i, sum] = (arr[i] == sum) || CalcF(i - 1, sum) || CalcF(i - 1, sum - arr[i]);
-            isCalculated[i, sum] = true;
+            Sums[i, currentSum] = (Number[i] == currentSum) || CalcF(i - 1, currentSum) || CalcF(i - 1, currentSum - Number[i]);
+            IsCalculated[i, currentSum] = true;
         }
 
-        return f[i, sum];
+        return Sums[i, currentSum];
     }
 
     private static void PrintSubset(int i, int sum)
@@ -46,16 +46,16 @@ public static class SubSetSums
         var nums = new List<int>();
         while (true)
         {
-            if (arr[i] == sum)
+            if (Number[i] == sum)
             {
-                nums.Add(arr[i]);
+                nums.Add(Number[i]);
                 break;
             }
-            else if (CalcF(i - 1, sum - arr[i]))
+            else if (CalcF(i - 1, sum - Number[i]))
             {
                 // Take arr[k]
-                nums.Add(arr[i]);
-                sum = sum - arr[i];
+                nums.Add(Number[i]);
+                sum = sum - Number[i];
                 i = i - 1;
             }
             else if (CalcF(i - 1, sum))
