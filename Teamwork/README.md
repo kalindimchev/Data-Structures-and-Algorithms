@@ -19,7 +19,7 @@ The task is to create an AI (artificial intelligence) player for one of the two 
 
 Mainly the teams should send their work in a [special web portal](https://github.com/NikolayIT/GameAITesterOnline):
 
-http://ai.bgcoder.com/
+http://ai.ednaigra.com/
 
 ## Working in private repositories
 
