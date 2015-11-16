@@ -1,69 +1,70 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class SubSetSums
+public static class SubSetSums
 {
-	static int[] arr = { 5, 5, 15, 20, 1 };
-	static int sum = 26;
-	static bool[,] f = new bool[arr.Length, sum + 1];
-	static bool[,] isCalculated = new bool[arr.Length, sum + 1];
+    private static int[] arr = { 5, 5, 15, 20, 1 };
 
-	static void Main()
-	{
-		bool possibleSum = CalcF(arr.Length - 1, sum);
-		if (possibleSum)
-		{
-			PrintSubset(arr.Length - 1, sum);
-		}
-		else
-		{
-			Console.WriteLine("Not possible!");
-		}
-	}
+    private static int sum = 26;
 
-	static bool CalcF(int i, int sum)
-	{
-		if (sum < 0 || i < 0)
-		{
-			return false;
-		}
+    private static bool[,] f = new bool[arr.Length, sum + 1];
 
-		if (!isCalculated[i, sum])
-		{
-			f[i, sum] =
-				(arr[i] == sum) ||
-				CalcF(i - 1, sum) ||
-				CalcF(i - 1, sum - arr[i]);
-			isCalculated[i, sum] = true;
-		}
+    private static bool[,] isCalculated = new bool[arr.Length, sum + 1];
 
-		return f[i, sum];
-	}
+    public static void Main()
+    {
+        var isSumPossible = CalcF(arr.Length - 1, sum);
+        if (isSumPossible)
+        {
+            PrintSubset(arr.Length - 1, sum);
+        }
+        else
+        {
+            Console.WriteLine("Not possible!");
+        }
+    }
 
-	private static void PrintSubset(int i, int sum)
-	{
-		Console.Write(sum + " = ");
-		List<int> nums = new List<int>();
-		while (true)
-		{
-			if (arr[i] == sum)
-			{
-				nums.Add(arr[i]);
-				break;
-			}
-			else if (CalcF(i - 1, sum - arr[i]))
-			{
-				// Take arr[k]
-				nums.Add(arr[i]);
-				sum = sum - arr[i];
-				i = i - 1;
-			}
-			else if (CalcF(i - 1, sum))
-			{
-				// Skip arr[k]
-				i = i - 1;
-			}
-		}
-		Console.WriteLine(string.Join(" + ", nums));
-	}
+    private static bool CalcF(int i, int sum)
+    {
+        if (sum < 0 || i < 0)
+        {
+            return false;
+        }
+
+        if (!isCalculated[i, sum])
+        {
+            f[i, sum] = (arr[i] == sum) || CalcF(i - 1, sum) || CalcF(i - 1, sum - arr[i]);
+            isCalculated[i, sum] = true;
+        }
+
+        return f[i, sum];
+    }
+
+    private static void PrintSubset(int i, int sum)
+    {
+        Console.Write(sum + " = ");
+        var nums = new List<int>();
+        while (true)
+        {
+            if (arr[i] == sum)
+            {
+                nums.Add(arr[i]);
+                break;
+            }
+            else if (CalcF(i - 1, sum - arr[i]))
+            {
+                // Take arr[k]
+                nums.Add(arr[i]);
+                sum = sum - arr[i];
+                i = i - 1;
+            }
+            else if (CalcF(i - 1, sum))
+            {
+                // Skip arr[k]
+                i = i - 1;
+            }
+        }
+
+        Console.WriteLine(string.Join(" + ", nums));
+    }
 }
