@@ -33,7 +33,8 @@ public static class SubSetSums
 
         if (!IsCalculated[i, currentSum])
         {
-            Sums[i, currentSum] = (Number[i] == currentSum) || CalcF(i - 1, currentSum) || CalcF(i - 1, currentSum - Number[i]);
+            Sums[i, currentSum] = (Number[i] == currentSum) || CalcF(i - 1, currentSum)
+                                  || CalcF(i - 1, currentSum - Number[i]);
             IsCalculated[i, currentSum] = true;
         }
 

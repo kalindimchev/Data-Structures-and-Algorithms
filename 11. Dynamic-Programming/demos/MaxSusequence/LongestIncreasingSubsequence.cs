@@ -7,43 +7,38 @@ public static class LongestIncreasingSubsequence
 
     public static void Main()
     {
-        var sequence = new[] { 3, 4, 8, 1, 2, 4, 32, 6, 2, 5, 33, 4, 38, 22 };
-        var lis = new int[sequence.Length];
-        var back = new int[sequence.Length];
+        var sequence = new[] { 1, 8, 2, 7, 3, 4, 1, 6 };
+        var length = new int[sequence.Length];
+        var predecessor = new int[sequence.Length];
+        var bestIndex = CalculateLongestIncreasingSubsequence(sequence, length, predecessor);
 
-        for (var i = 0; i < sequence.Length; i++)
-        {
-            back[i] = NoPrevious;
-        }
+        Console.WriteLine("sequence    = " + string.Join(", ", sequence));
+        Console.WriteLine("length      = " + string.Join(", ", length));
+        Console.WriteLine("predecessor = " + string.Join(", ", predecessor));
 
-        var bestIndex = CalculateLongestIncreasingSubsequence(sequence, lis, back);
-
-        Console.WriteLine("sequence = " + string.Join(", ", sequence));
-        Console.WriteLine("lis = " + string.Join(", ", lis));
-        Console.WriteLine("back = " + string.Join(", ", back));
-
-        PrintLongestIncreasingSubsequence(sequence, back, bestIndex);
+        PrintLongestIncreasingSubsequence(sequence, predecessor, bestIndex);
     }
 
-    private static int CalculateLongestIncreasingSubsequence(int[] sequence, int[] lis, int[] back)
+    private static int CalculateLongestIncreasingSubsequence(int[] sequence, int[] length, int[] predecessor)
     {
-        var bestF = 0;
+        var bestEnd = 0;
         var bestIndex = 0;
         for (var i = 0; i < sequence.Length; i++)
         {
-            lis[i] = 1;
+            length[i] = 1;
+            predecessor[i] = NoPrevious;
             for (var k = 0; k <= i - 1; k++)
             {
                 if (sequence[k] < sequence[i])
                 {
-                    if (lis[k] + 1 > lis[i])
+                    if (length[k] + 1 > length[i])
                     {
-                        lis[i] = lis[k] + 1;
-                        back[i] = k;
+                        length[i] = length[k] + 1;
+                        predecessor[i] = k;
 
-                        if (lis[i] > bestF)
+                        if (length[i] > bestEnd)
                         {
-                            bestF = lis[i];
+                            bestEnd = length[i];
                             bestIndex = i;
                         }
                     }
@@ -53,17 +48,17 @@ public static class LongestIncreasingSubsequence
 
         return bestIndex;
     }
-
-    private static void PrintLongestIncreasingSubsequence(int[] sequence, int[] back, int bestIndex)
+    
+    private static void PrintLongestIncreasingSubsequence(int[] sequence, int[] predecessor, int maxElementIndex)
     {
         var lis = new List<int>();
-        while (bestIndex != NoPrevious)
+        while (maxElementIndex != NoPrevious)
         {
-            lis.Add(sequence[bestIndex]);
-            bestIndex = back[bestIndex];
+            lis.Add(sequence[maxElementIndex]);
+            maxElementIndex = predecessor[maxElementIndex];
         }
 
         lis.Reverse();
-        Console.WriteLine("subsequence = " + string.Join(" ", lis));
+        Console.WriteLine("subsequence = " + string.Join(", ", lis));
     }
 }

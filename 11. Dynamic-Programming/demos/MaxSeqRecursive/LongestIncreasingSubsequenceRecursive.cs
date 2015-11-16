@@ -5,7 +5,7 @@ public static class LongestIncreasingSubsequenceRecursive
 {
     private const int NoPrevious = -1;
 
-    private static readonly int[] Sequence = { 3, 4, 8, 1, 2, 4, 32, 6, 2, 5, 33, 4, 38, 22 };
+    private static readonly int[] Sequence = { 1, 8, 2, 7, 3, 4, 1, 6 };
 
     private static int[] lis = new int[Sequence.Length];
 
