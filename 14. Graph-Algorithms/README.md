@@ -1,3 +1,9 @@
-## 11. Graphs and Graph Algorithms
-### [View Presentation online](https://rawgit.com/TelerikAcademy/Data-Structures-and-Algorithms/master/11.%20Graphs-and-Graph-Algorithms/slides/index.html)
+## Graphs and Graph Algorithms
+### [View Presentation online](https://rawgit.com/TelerikAcademy/Data-Structures-and-Algorithms/master/14.%20Graph-Algorithms/slides/index.html)
 ### Table of Contents
+* Graph Traversal Algorithms
+* Connectivity
+* Dijkstra’s Algorithm
+* Topological sorting
+* Prim and Kruskal
+
