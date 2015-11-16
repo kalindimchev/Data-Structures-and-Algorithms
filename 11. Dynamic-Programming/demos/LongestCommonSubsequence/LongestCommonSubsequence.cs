@@ -14,7 +14,7 @@ public static class LongestCommonSubsequence
         Console.WriteLine();
     }
 
-    static int[,] LCS(string firstString, string secondString)
+    private static int[,] LCS(string firstString, string secondString)
     {
         var m = firstString.Length;
         var n = secondString.Length;
@@ -25,9 +25,13 @@ public static class LongestCommonSubsequence
             for (var j = 1; j <= n; j++)
             {
                 if (firstString[i - 1] == secondString[j - 1])
+                {
                     c[i, j] = c[i - 1, j - 1] + 1;
+                }
                 else
+                {
                     c[i, j] = Math.Max(c[i, j - 1], c[i - 1, j]);
+                }
             }
         }
 
@@ -35,7 +39,7 @@ public static class LongestCommonSubsequence
         return c;
     }
 
-    static void PrintLCS(int i, int j, int[,] c)
+    private static void PrintLCS(int i, int j, int[,] c)
     {
         if (i == 0 || j == 0)
         {

@@ -13,11 +13,13 @@
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
 * Minimum and Maximum
-* Divide-and-Conquer
+* Divide and Conquer
 * Dynamic Programming Concepts
 * Fibonacci Numbers
+* Subset Sum Problem
 * Longest Increasing Subsequence
 * Longest Common Subsequence
+* Other Dynamic Programming Usages
 <img class="slide-image" src="imgs/content-page-image.png" style="width:30%; top:15%; left:75%" />
 
 
@@ -84,7 +86,7 @@ int FindMax(int[] numbers)
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Divide-and-Conquer
+# Divide and Conquer
 <img class="slide-image" src="imgs/divide-and-conquer.png" style="width:50%; top:45%; left:25%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
@@ -425,7 +427,7 @@ void PrintLongestIncreasingSubsequence(
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # LCS table – base cases filled in
-* Each empty string has nothing in common with any other string, therefor the 0-length strings will have values 0 in the LCS table
+* Each empty string has nothing in common with any other string, therefor the 0-length strings will have values `0` in the LCS table
 
 ```cs
 for (i = 0; i <= n; i++)
