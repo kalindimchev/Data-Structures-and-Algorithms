@@ -26,7 +26,7 @@
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Graph Traversal Algorithms
-* Depth-First Search (DFS) and Breadth-First Search (BFS) can traverse graphs
+* **Depth-First Search** (DFS) and **Breadth-First Search** (BFS) can traverse graphs
   * Each vertex should be visited at most once
 
 <pre class="lang-cs hljs " style="width:40%; float:left">
@@ -94,7 +94,7 @@ void Main()
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Connectivity
-* `Connected component `of undirected graph
+* **Connected component** of undirected graph
   *  A sub-graph in which any two nodes are connected to each other by paths
 
 <img class="slide-image" src="imgs/connectivity.png" style="width:45%; top:38%; left:26%" />
@@ -102,7 +102,7 @@ void Main()
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 <!-- # Connectivity -->
 * A simple way to find number of connected components
-  * A loop through all nodes and start a `DFS` or `BFS `traversing from any unvisited node
+  * A loop through all nodes and start a **DFS** or **BFS** traversing from any unvisited node
 * Each time you start a new traversing
   * You find a new connected component!
 
@@ -127,8 +127,8 @@ foreach node from graph G
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 <!-- # Connectivity -->
 <div style="width:75%">
-* `Connected graph`
-  * A graph with only `one` connected component
+* **Connected graph**
+  * A graph with only **one** connected component
 * In every connected graph a path exists between any two nodes
 * Checking whether a graph is connected
   * If DFS / BFS passes through all vertices &rarr; graph is connected!
@@ -147,8 +147,10 @@ foreach node from graph G
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Dijkstra’s Algorithm
-* Find the `shortest path` from vertex `A` to vertex `B` - a directed path between them such that no other path has a lower weight.
-* `Assumptions`
+
+* Find the **shortest path** from vertex `A` to all other vertices
+  * The path is a directed path between them such that no other path has a lower weight.
+* **Assumptions**
   * Edges can be directed or not
   * Weight does not have to be distance
   * Weights are positive or zero
@@ -170,23 +172,25 @@ foreach node from graph G
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 <!-- # Dijkstra’s Algorithm -->
-* Solution to this problem – priority queue instead of queue + keeping information about the shortest distance so far
+* Solution to this proble:
+  * `Priority queue` instead of `queue`
+  * **Keeping information** about the shortest distance so far
 * Steps:
   * Enqueue all distances from S
   * Get the lowest in priority - B
-  * If edge B-A exists, check (S-B) + (B-A) and save the lower one
+  * If edge `(B, A)` exists, check `(S, B) + (B, A)` and save the lower one
   * Overcome the triangle inequality miss
 
-<img class="slide-image" src="imgs/dijkstra3.png" style="width:30%; top:25%; left:65%" />
+<img class="slide-image" src="imgs/dijkstra3.png" style="width:30%; top:30%; left:65%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 <!-- # Dijkstra’s Algorithm -->
-* `Dijkstra’s algorithm:`
+* **Dijkstra’s algorithm:**
 <ol>
     <li>Set the distance to every node to Infinity except the source node – must be zero</li>
     <li>Mark every node as unprocessed</li>
     <li>Choose the first unprocessed node with smallest non-infinity distance as current. If such does not exist, the algorithm has finished</li>
-    <li>At first we set the current node our `Source`</li>
+    <li>At first we set the current node our **Source**</li>
 </ol>
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
@@ -195,7 +199,7 @@ foreach node from graph G
     <li>Calculate the distance for all unprocessed neighbors by adding the current distance to the already calculated one</li>
     <li>If the new distance is smaller than the previous one – set the new value</li>
     <li>Mark the current node as processed</li>
-    <li>Repeat step `3.`</li>
+    <li>Repeat step **3.**</li>
 </ol>
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
@@ -213,19 +217,14 @@ set all nodes DIST = INFINITY;
 set current node the source and distance = 0;
 Q -> all nodes from graph, ordered by distance;
 while (Q is not empty)
-{
-  a = dequeue the smallest element (first in PriorityQueue);
-     if (distance of a == INFINITY) break;
-     foreach neighbour v of a
-	{
-	    potDistance = distance of a + distance of (a-v);
-	    if (potDistance < distance of v)
-	    {
-		distance of v = potDistance;
-		reorder Q;
-	    }
-	}
-}
+    a = dequeue the smallest element (first in PriorityQueue);
+    if (distance of a == INFINITY) break
+
+    foreach neighbour v of a     
+        potDistance = distance of a + distance of (a-v)      
+        if (potDistance < distance of v)
+            distance of v = potDistance;
+            reorder Q;
 ```
 
 <!-- attr: { showInPresentation:true, style:'' } -->
@@ -251,9 +250,9 @@ while (Q is not empty)
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Topological Sorting
-* Topological ordering of a `directed graph `
-  * linear ordering of its vertices 
-  * for every directed edge from vertex u to vertex v, u comes before v in the ordering
+* Topological ordering of a **directed graph**
+  * Linear ordering of its vertices
+  * For every directed edge `(U, V)`, `U` comes before `V` in the ordering
 * _Example_:
   * 7, 5, 3, 11, 8, 2, 9, 10
   * 3, 5, 7, 8, 11, 2, 9, 10
@@ -263,7 +262,7 @@ while (Q is not empty)
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 <!-- # Topological Sorting -->
-* `Rules`
+* **Rules**
   * Undirected graph cannot be sorted
   * Directed graphs with cycles cannot be sorted
   * Sorting is not unique
@@ -273,8 +272,8 @@ while (Q is not empty)
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 <!-- # Topological Sorting -->
-* `Source removal algorithm`
-  1. Create an Empty List 
+* **Source removal algorithm**
+  1. Create an Empty List
   2. Find a Node without incoming Edges
   3. Add this Node to the end of the List
   4. Remove the Edge from the Graph
@@ -296,54 +295,53 @@ while S is non-empty do
             insert m into S
 if graph has edges then
     return error (graph has at least one cycle)
-else 
+else
     return L (a topologically sorted order)
 ```
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Step #1-2
 <img class="slide-image" src="imgs/topo-steps-12.png" style="width:80%; bottom:5%; left:7%" />
 
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none' } -->
 # Step #3-4
 <img class="slide-image" src="imgs/topo-steps-34.png" style="width:65%; bottom:5%; left:7%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Step #2
 <img class="slide-image" src="imgs/topo-steps-2b.png" style="width:65%; bottom:5%; left:7%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Step #3-4
 <img class="slide-image" src="imgs/topo-steps-34b.png" style="width:65%; bottom:5%; left:7%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Step #2
 <img class="slide-image" src="imgs/topo-steps-2c.png" style="width:65%; bottom:5%; left:7%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Step #3-4
 <img class="slide-image" src="imgs/topo-steps-34c.png" style="width:65%; bottom:5%; left:7%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Step #2
 <img class="slide-image" src="imgs/topo-steps-2d.png" style="width:65%; bottom:5%; left:7%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Step #3-4
 <img class="slide-image" src="imgs/topo-steps-34d.png" style="width:65%; bottom:5%; left:7%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Step #2
 <img class="slide-image" src="imgs/topo-steps-2ef.png" style="width:65%; bottom:5%; left:7%" />
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Result:TS
 <img class="slide-image" src="imgs/topo-result.png" style="width:80%; top:30%; left:7%" />
 
 <!-- attr: { showInPresentation:true, style:'' } -->
 <!-- # Topological Sorting -->
-* `DFS algorithm`
+* **DFS algorithm**
   * Create an empty List
   * Find a Node without Outgoing Edges
   * Mark the Node as visited
@@ -359,7 +357,7 @@ else
 L ← Empty list that will contain the sorted nodes
 while there are unmarked nodes do
     select an unmarked node n
-    visit(n) 
+    visit(n)
 function visit(node n)
     if n has a temporary mark then stop (not a DAG)
     if n is not marked (i.e. has not been visited yet) then
@@ -487,7 +485,7 @@ function visit(node n)
 * So we get the next one – 9
   * This edge will also cost a cycle
 * So we get the next one – 12
-  * We add it to the tree 
+  * We add it to the tree
   * We add the vertex F to the tree <!-- .element: style="width:65%" -->
 
 <img class="slide-image" src="imgs/prim8.png" style="width:50%; top:55%; left:50%" />
@@ -520,7 +518,7 @@ function visit(node n)
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Kruskal’s Algorithm
 * We build a forest containing all vertices from the graph
-* We sort all edges 
+* We sort all edges
 * Edges are – 2, 4, 5, 7, 8, 9, 12, 20
 
 <img class="slide-image" src="imgs/kruskal1.png" style="width:50%; top:55%; left:25%" />
@@ -542,7 +540,7 @@ function visit(node n)
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 <!-- # Kruskal’s Algorithm -->
-* We select the edge 4 
+* We select the edge 4
 * This edge connects the vertices A and B (they are different trees)
 * We add it
 

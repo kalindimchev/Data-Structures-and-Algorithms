@@ -1,7 +1,9 @@
 <!-- section start -->
+
 <!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Graphs
 ##  Fundamentals, Terminology
+
 <div class="signature">
     <p class="signature-course">Data Structures and Algorithms</p>
     <p class="signature-initiative">Telerik Software Academy</p>
@@ -9,6 +11,7 @@
 </div>
 
 <!-- section start -->
+
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Table of Contents
 * Graph Definitions and Terminology
@@ -157,7 +160,7 @@
 
 <img class="slide-image" src="imgs/adjacency-list.png" style="width:40%; top:13%; left:60%" />
 <img class="slide-image" src="imgs/adjacency-matrix.png" style="width:20%; top:39%; left:55%" />
-<img class="slide-image" src="imgs/set-edges.png" style="width:40%; top:70%; left:50%" /> 
+<img class="slide-image" src="imgs/set-edges.png" style="width:40%; top:70%; left:50%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Simple C# Representation
@@ -184,7 +187,7 @@ Graph g = new Graph(new List<int>[] {
   new List<int> {0, 1, 4}  // successors of vertice 6
 });
 ```
-<img class="slide-image" src="imgs/cs-graph.png" style="width:30%; top:15%; left:62%" /> 
+<img class="slide-image" src="imgs/cs-graph.png" style="width:30%; top:15%; left:62%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 # Advanced C# Representation
