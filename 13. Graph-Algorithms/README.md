@@ -1,4 +1,4 @@
-## 13 Graphs and Graph Algorithms
+## 13. Graphs and Graph Algorithms
 ### [View Presentation online](https://rawgit.com/TelerikAcademy/Data-Structures-and-Algorithms/master/14.%20Graph-Algorithms/slides/index.html)
 ### Table of Contents
 * Graph Traversal Algorithms
