@@ -301,10 +301,15 @@ else
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
 # Step #1-2
-<img class="slide-image" src="imgs/topo-steps-12.png" style="width:80%; bottom:5%; left:7%" />
+
+* The node `A` is the only node without incoming edges <!--  -->
+
+<img class="slide-image" src="imgs/topo-steps-12.png" style="width:65%; bottom:5%; left:7%"  />
+
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none' } -->
 # Step #3-4
+
 <img class="slide-image" src="imgs/topo-steps-34.png" style="width:65%; bottom:5%; left:7%" />
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'', 'data-transition':'none'  } -->
