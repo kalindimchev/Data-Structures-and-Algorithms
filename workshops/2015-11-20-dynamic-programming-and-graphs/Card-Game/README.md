@@ -2,7 +2,7 @@
 
 ## Description
 
-A natural number is written on each one of **N** cards. Each of the numbers is less than 1000. The cards are arranged next to one another. Martin has invented a new game. On each step of the game on card is removed (not the first, or last one). You get points for each removed card - the product of its number and the sum of its neighbours. In the end there will be two cards left. Write a program wich finds the maximum amount of points which you can get for the given game.
+A natural number is written on each one of **N** cards. Each of the numbers is less than 1000. The cards are arranged next to one another. Martin has invented a new game. On each step of the game one card is removed (not the first, or last one). You get points for each removed card - the product of its number and the sum of its neighbours. In the end there will be two cards left. Write a program wich finds the maximum amount of points which you can get for the given game.
 
 ## Input
 * Input is read from the console
