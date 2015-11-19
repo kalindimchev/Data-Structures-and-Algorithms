@@ -15,8 +15,8 @@ A natural number is written on each one of **N** cards. Each of the numbers is l
 
 ## Constraints
 * 3 <= **N** <= 700
-* Time limit: **0.2 seconds**
-* Memory limit: **64 MB**
+* Time limit: **0.5 seconds**
+* Memory limit: **16 MB**
 
 ## Examples
 
