@@ -24,7 +24,7 @@
 
 <!-- attr: {class: 'slide-section'} -->
 # Searching algorithms
-## Subtitle
+## Naive, hashes, prefix/suffix trees
 
 <!-- section start -->
 
@@ -68,8 +68,9 @@
 
 <!-- attr: {hasScriptWrapper: true} -->
 # Aho-Corasick
-* Like KMP, but for multiple patters
-	* "Partial match" prefix tree is precomputed
+* Like KMP, but for multiple patterns
+	* "Partial match" prefix tree (trie) is precomputed
+		* Linear in time
 	* Each occurrence of each pattern is found
 	* Linear in time
 		* There can be quadratic number of occurrences
@@ -80,8 +81,28 @@
 
 <!-- attr: {} -->
 # Suffix trees
-* Compressed trie of prefixes
-	* Linear in time
+* Precompute is done on the text
+	* A compressed trie of all suffixes
+		* Linear in time using Ukkonen's algorithm
+	* Requires a lot of memory to store the tree
+
+<!-- attr: {} -->
+# Suffix arrays
+* Sorted array of all suffixes
+	* Represented as indexes
+* Building
+	* Naive
+		* n<sup>2</sup>\*log(n)
+	* Prefix doubling
+		* n\*log<sup>2</sup>(n)
+	* Prefix doubling and radix sort
+		* n\*log(n)
+	* DFS traversal of a suffix tree
+		* Linear in time
+	* DC3/Skew, others
+		* Linear in time
+* Auxiliary structures
+	* LCP array
 
 <img src="imgs/Suffix_tree.png" width="30%" style="float:right">
 
