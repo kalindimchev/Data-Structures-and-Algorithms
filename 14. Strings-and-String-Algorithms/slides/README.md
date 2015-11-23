@@ -86,6 +86,8 @@
 		* Linear in time using Ukkonen's algorithm
 	* Requires a lot of memory to store the tree
 
+<img src="imgs/Suffix_tree.png" width="30%" style="float:right">
+
 <!-- attr: {} -->
 # Suffix arrays
 * Sorted array of all suffixes
@@ -98,8 +100,6 @@
 	* DC3/Skew, others - `O(n)`
 * Auxiliary structures
 	* LCP array
-
-<img src="imgs/Suffix_tree.png" width="30%" style="float:right">
 
 <!-- section start -->
 
