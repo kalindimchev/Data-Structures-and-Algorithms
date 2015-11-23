@@ -79,7 +79,7 @@
 
 <!-- section start -->
 
-<!-- attr: {} -->
+<!-- attr: {hasScriptWrapper: true} -->
 # Suffix trees
 * Precompute is done on the text
 	* A compressed trie of all suffixes
@@ -88,7 +88,7 @@
 
 <img src="imgs/Suffix_tree.png" width="30%" style="float:right">
 
-<!-- attr: {} -->
+<!-- attr: {hasScriptWrapper: true} -->
 # Suffix arrays
 * Sorted array of all suffixes
 	* Represented as indexes
