@@ -91,16 +91,11 @@
 * Sorted array of all suffixes
 	* Represented as indexes
 * Building
-	* Naive
-		* n<sup>2</sup>\*log(n)
-	* Prefix doubling
-		* n\*log<sup>2</sup>(n)
-	* Prefix doubling and radix sort
-		* n\*log(n)
-	* DFS traversal of a suffix tree
-		* Linear in time
-	* DC3/Skew, others
-		* Linear in time
+	* Naive - `O(n<sup>2</sup>*log(n))`
+	* Prefix doubling - `O(n*log<sup>2</sup>(n))`
+	* Prefix doubling and radix sort - `O(n*log(n))`
+	* DFS traversal of a suffix tree - `O(n)`
+	* DC3/Skew, others - `O(n)`
 * Auxiliary structures
 	* LCP array
 
