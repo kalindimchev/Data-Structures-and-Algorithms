@@ -1,25 +1,37 @@
-namespace Cards
+namespace CardGame
 {
-	using System;
-	using System.Linq;
+    using System;
+    using System.Linq;
 
-	public class StartUp
-	{
-		static void Main()
-		{
-			var n = int.Parse(Console.ReadLine());
-			var numbers = Console.ReadLine().Split(' ').Select(int.Parse);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int[] numbers = Console.ReadLine().Split(' ')
+                .Select(int.Parse).ToArray();
 
-			var maxpoints = new int[n, n];
+            int[,] dp = new int[n, n];
 
-			for(var i = 0; i < n - 2; i++)
-			{
-				maxpoints[i, i + 2] = numbers[i + 1] * (numbers[i] + numbers[i + 2]);
-			}
-			
-			// dp
+            for (int length = 3; length <= n; length++)
+            {
+                for (int i = 0; i <= n - length; i++)
+                {
+                    //i, i + length - 1
+                    for (int j = i + 1; j < i + length - 1; j++)
+                    {
+                        int current = dp[i, j] + dp[j, i + length - 1]
+                            + numbers[j] * (numbers[i] + numbers[i + length - 1]);
 
-			Console.WriteLine(maxpoints[0, n - 1]);
-		}
-	}
+                        if (dp[i, i + length - 1] < current)
+                        {
+                            dp[i, i + length - 1] = current;
+                        }
+                    }
+                }
+            }
+
+            Console.WriteLine(dp[0, n - 1]);
+        }
+    }
 }
