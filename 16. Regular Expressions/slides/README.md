@@ -1,6 +1,6 @@
 <!-- section start -->
 <!-- attr: { class:'slide-title', hasScriptWrapper: true, showInPresentation:true, style:'' } -->
-# Regular Expressions in JS
+# Regular Expressions in C#
 ##  Fast ways to search and replace string
 
 <div class="signature">
@@ -79,7 +79,7 @@
   - https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters
 
 <!-- attr: { showInPresentation:true, style:'' } -->
-# Special Characters in Regex: `x`
+# Special Characters in Regex: `*`
 - Special Characters in Regex:
   - `*` – The preceding character is matched 0 or more times
     - `a*`
@@ -90,7 +90,7 @@
         - 'a' is matched 0 times
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
-<!-- # Special Characters: x -->
+<!-- # Special Characters: * -->
 ##  [Demo]()
 
 <!-- attr: { showInPresentation:true, style:'' } -->
@@ -139,44 +139,38 @@
 # Special Characters in Regex: `|`
 - Special Characters in Regex:
   - `|` – Matches one pattern or the other
-    -        
-    - Matches: 'Telerik Academy'
-- T|A
+  - T|A
+    - Matches: '**T**elerik **A**cademy'
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 <!-- # Special Characters: | -->
 ##  [Demo]()
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, style:'font-size:45px' } -->
 # Special Characters in Regex: `[ ]`
 - Special Characters in Regex:
   - `[xyz]` – Character set
     - Matches any one of the enclosed characters
-    -        
-    - Matches: 'Telerik Academy'
-- [TAy]
+    - `[TAy]`
+      - Matches: '**T**elerik **A**cadem**y**'
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 <!-- # Special Characters: [ ] -->
 ##  [Demo]()
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, style:'font-size:40px' } -->
 # Special Characters in Regex: `[ ]`
 - Special Characters in Regex:
   - `[x-z]` – Character set
-    - Matches any one between the characters range
-    -        
-    - Matches: 'Telerik Academy'
-    -  
-    - Matches: 'Telerik Academy'
-    -  
-    - Matches: 'Telerik Academy'
-    -  
-    - Matches: 'John in 19-years-old'
-- [A-Z]
-- [A-z]
-- [a-q]
-- [0-9]
+      - Matches any one between the characters range
+  - `[A-Z]`
+    - Matches: '**T**elerik **A**cademy'
+  - `[A-z]`
+    - Matches: '**Telerik** **Academy**'
+  - `[a-q]`
+    - Matches: 'T**ele**r**ik** **Academ**y'
+  - `[0-9]`
+    - Matches: 'John in **19**-years-old'
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 <!-- # Special Characters: [ ] Range -->
@@ -187,10 +181,9 @@
 - Special Characters in Regex:
   - `[^xyx]` – A negated or complemented character set
     - Matches anything that is not enclosed in the brackets       
-    -  
-    - Matches: 'Telerik Academy'
-    - Does not match: 'eaaaaeeeaaa', 'aaaa', 'eeee'
-- [^ea]+
+    - [^ea]+
+      - Matches: '**T**e**l**e**rik Ac**a**d**e**my**'
+      - Does not match: 'eaaaaeeeaaa', 'aaaa', 'eeee'
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 <!-- # Special Characters: [^xyz] -->
@@ -199,68 +192,39 @@
 <!-- attr: { showInPresentation:true, style:'' } -->
 # Special Characters in Regex: {}
 - Special Characters in Regex:
-  - `{N}` – matches exactly `N` occurrences       
+  - `{N}` – matches exactly `N` occurrences
     - Where `N` is a positive number
-    -  
-    - Matches: 'Telerik Academy', 'Doncho Minkov'
-    - Does not match: 'JS is the best'
-- [A-z]{5}
+    - [A-z]{5}
+      - Matches: '**Teler**ik **Acade**my', '**Donch**o **Minko**v'
+      - Does not match: 'JS is the best'
   - `{N, M}` – matches at least `N` and at most `M` occurrences of the preceding character
     - Where `N` and `M` are positive integers
-    -   
-    - Matches: 'Telerik Academy', 'JS is best'
-    - Does not match: 'Ivo is the MAN'
-- [A-z]{4, 5}
+    - [A-z]{4, 5}
+      - Matches: '**Teler**ik **Acade**my', 'JS is **best**'
+      - Does not match: 'Ivo is the MAN'
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 <!-- # Special Characters: {} -->
 ##  [Demo]()
 
-<!-- attr: { showInPresentation:true, style:'' } -->
+<!-- attr: { showInPresentation:true, style:'font-size:40px' } -->
 # Other Special Characters in Regex
 - Special Characters in Regex:
-  - `/s` – matches a single white space character, including space, tab, form feed, line feed
-  - `/S `– matches a single character other than white space
-  - `/d` – matches a digit character
+  - `\s` – matches a single white space character, including space, tab, form feed, line feed
+  - `\S `– matches a single character other than white space
+  - `\d` – matches a digit character
     - Equivalent to `[0-9]`
-  - `/D` – matches any non-digit character
+  - `\D` – matches any non-digit character
     - Equivalent to `[^0-9]`
-  - `/w` – matches any alphanumeric character including the underscore
-  - `/W` – matches any non-alphanumeric or underscore character
-- Matches a digit character. Equivalent to [0-9].
+  - `\w` – matches any alphanumeric character including the underscore
+  - `\W` – matches any non-alphanumeric or underscore character
 
 <!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
 <!-- # Other Special Characters in Regular Expressions -->
 ##  [Demo]()
 
-<!-- section start -->
-<!-- attr: { class:'slide-section', showInPresentation:true, style:'' } -->
-# Regular Expression Flags
+<!-- attr: { class: "slide-questions", showInPresentation:true, style:'' } -->
+# Regular Expressions in C#
+##  Questions
 
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Regular Expression Flags
-- Regular expression have optional flags that allow for global and case insensitive searching
-  - These flags can be used separately or together in any order
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
-<!-- attr: { class:'slide-section demo', showInPresentation:true, style:'' } -->
-<!-- # Regular Expression Flags -->
-##  [Demo]()
-
-<!-- attr: { showInPresentation:true, style:'' } -->
-# Regular Expressions in JS
-- http://academy.Telerik.com
-
-<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
-# Free Trainings @ Telerik Academy
-- "Web Design with HTML 5, CSS 3 and JavaScript" course @ Telerik Academy
-    - html5course.telerik.com
-  - Telerik Software Academy
-    - academy.telerik.com
-  - Telerik Academy @ Facebook
-    - facebook.com/TelerikAcademy
-  - Telerik Software Academy Forums
-    - forums.academy.telerik.com
-
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
+*  http://academy.Telerik.com
