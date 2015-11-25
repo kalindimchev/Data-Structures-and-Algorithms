@@ -172,7 +172,7 @@ foreach node from graph G
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'' } -->
 <!-- # Dijkstra’s Algorithm -->
-* Solution to this proble:
+* Solution to this problem:
   * `Priority queue` instead of `queue`
   * **Keeping information** about the shortest distance so far
 * Steps:
