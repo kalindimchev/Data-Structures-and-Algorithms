@@ -15,7 +15,7 @@ You are given a string **S**. **S** could be consisted of a smaller string repea
 ## Constraints
 * 1 <= length of string <= 1 000 000
 * Time limit: **0.1 seconds**
-* Memory limit: **16 MB**
+* Memory limit: **32 MiB**
 
 ## Examples
 
