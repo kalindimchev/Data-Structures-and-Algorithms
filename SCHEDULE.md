@@ -48,7 +48,6 @@
 | 19  | Strings and algorithms on strings    | 10:30 | Tue (24-Nov-2015) | Cuki        |
 | 20  | State machines                       | 13:00 | Tue (24-Nov-2015) | Doncho      |
 | 21  | Regular expressions                  | 14:00 | Tue (24-Nov-2015) | Doncho      |
-| 22  | Computational geometry               | 10:30 | Wed (25-Nov-2015) | Doncho      |
 | 23  | Greedy algorithms                    | 10:30 | Wed (25-Nov-2015) | Doncho      |
 | 24  | **Workshop** on strings and greedy   | 10:30 | Fri (27-Nov-2015) | Cuki + Niki |
 
