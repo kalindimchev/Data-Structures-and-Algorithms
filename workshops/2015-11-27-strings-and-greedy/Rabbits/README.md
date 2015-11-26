@@ -25,10 +25,10 @@ Print the minimum possible number of rabbits in this town.
 
 ## Examples
 
-| Input                   | Output | Description                                      |
-| ----------------------- | ------ | ------------------------------------------------ |
-| `1 1 2 2 -1`              | `5`      | If there are 2 rabbits with a color and 3 rabbits with another color, Pochi can get this set of replies. See the image below. |
-| `0 -1`                    | `1`      | A poor lonely rabbit. |
-| `2 2 44 2 2 2 444 2 2 -1` | `499`    |  |
+| Input                     | Output | Description                                      |
+| ------------------------- | ------ | ------------------------------------------------ |
+| `1 1 2 2 -1`              | `5`    | If there are 2 rabbits with a color and 3 rabbits with another color, Pochi can get this set of replies. See the image below. |
+| `0 -1`                    | `1`    | A poor lonely rabbit. |
+| `2 2 44 2 2 2 444 2 2 -1` | `499`  |  |
 
 ![Test 1 Explanation](Images/Test1Explanation.png)
