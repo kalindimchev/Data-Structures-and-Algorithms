@@ -29,6 +29,6 @@ Output the shortest palindrome that can be produced by adding zero or more chara
 | ----------- | --------------- |
 | add         | adda            |
 | cigartragic | cigartragic     |
-| redocpot    | redocpotopcoder |
+| redocgb     | redocgbgcoder   |
 | acaba       | acabaca         |
 | abczyxyz    | abczyxyzcba     |
