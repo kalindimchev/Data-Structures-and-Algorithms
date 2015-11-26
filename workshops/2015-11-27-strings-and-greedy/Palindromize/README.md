@@ -25,10 +25,10 @@ Output the shortest palindrome that can be produced by adding zero or more chara
 
 ## Examples
 
-| Input       | Output          |
-| ----------- | --------------- |
-| add         | adda            |
-| cigartragic | cigartragic     |
-| redocgb     | redocgbgcoder   |
-| acaba       | acabaca         |
-| abczyxyz    | abczyxyzcba     |
+| Input         | Output          |
+| ------------- | --------------- |
+| `add`         | `adda`          |
+| `cigartragic` | `cigartragic`   |
+| `redocgb`     | `redocgbgcoder` |
+| `acaba`       | `acabaca`       |
+| `abczyxyz`    | `abczyxyzcba`   |
