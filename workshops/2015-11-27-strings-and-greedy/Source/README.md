@@ -6,15 +6,15 @@ An important problem of software maintenance is to track down duplication in a l
 
 Let **Σ** and **Π** be two alphabets: **Σ** is the upper case English alphabet and **Π** is the lower case English alphabet. Each symbol in **Σ** represents a token and each symbol in **Π** represents a parameter.
 
-A string can consist of any combinations of tokens and parameters fro m **Σ** and **Π**. Two strings A and B are said to p-match if and only if:
-* A and B have the same length (more formally: length(A) = length(B))
-*  Each token in A matches a token in B and each parameter in A matches a parameter in B (more formally: ( A i is a token and B i is a token) or ( A i is a parameter and B i is a parameter) for any 1 <= i <= length(A))
-*  The alignment of tokens in A and B is a perfect match (more formally: if A i is a token then A i = B i for any 1 <= i <= length(A))
-*  The alignment of parameters in A and B defines a one-to-one correspondence between parameter names in A and parameter names in B (more formally: there exists a one-to-one (bijective) function f : **Π** → **Π** such that if A i is a parameter f(A i) = B i for any 1 <= i <= length(A))
+A string can consist of any combinations of tokens and parameters fro m **Σ** and **Π**. Two strings **A** and **B** are said to _p_-match if and only if:
+* **A** and **B** have the same length (more formally: length(**A**) = length(**B**))
+*  Each token in **A** matches a token in **B** and each parameter in **A** matches a parameter in **B** (more formally: ( **A** i is a token and **B** i is a token) or ( **A** i is a parameter and **B** i is a parameter) for any 1 <= i <= length(**A**))
+*  The alignment of tokens in **A** and **B** is a perfect match (more formally: if **A** i is a token then **A** i = **B** i for any 1 <= i <= length(**A**))
+*  The alignment of parameters in **A** and **B** defines a one-to-one correspondence between parameter names in **A** and parameter names in **B** (more formally: there exists a one-to-one (bijective) function _f_ : **Π** → **Π** such that if **A** i is a parameter _f_(**A** i) = **B** i for any 1 <= i <= length(**A**))
 
-A token represents a part of the program that cannot be changed, whereas a parameter represents a program's variable, which can be renamed as long as all occurrences of the varia ble are renamed consistently. Thus if A and B p-match, then the variable names in A could be changed to the corresponding variable names in B, making the two programs identical. If these two problems were part of a larger program, then they could both be replaced by a call to a single subroutine.
+A token represents a part of the program that cannot be changed, whereas a parameter represents a program's variable, which can be renamed as long as all occurrences of the varia ble are renamed consistently. Thus if **A** and **B** _p_-match, then the variable names in **A** could be changed to the corresponding variable names in **B**, making the two programs identical. If these two problems were part of a larger program, then they could both be replaced by a call to a single subroutine.
 
-Given a text **T** and a pattern **P**, each a string over **Σ** and **Π**, find all substrings of **T** that p-match **P**.
+Given a text **T** and a pattern **P**, each a string over **Σ** and **Π**, find all substrings of **T** that _p_-match **P**.
 
 ## Input
 * Input is read from the console
@@ -23,7 +23,7 @@ Given a text **T** and a pattern **P**, each a string over **Σ** and **Π**, fi
 
 ## Output
 * Output should be printed on the console
-  * On the first line output the number of substrings of **T** that p-match **P**
+  * On the first line output the number of substrings of **T** that _p_-match **P**
   * On the second line output the offsets of those substrings
     * By convention prefixes have offset 1
 
@@ -50,8 +50,10 @@ xXYdxCdCXZccxW
 ```
 
 #### Explanation
-The pattern XYabCaCXZddbW p-matches the 2-offset text substring XYdxCdCXZccxW but does not p-match the 1-offset text substring xXYdxCdCXZccx.
-Notice that when the p-match occurs, the following one-to-one (bijective) function _f_ is used:
-_f_(a) = d
-_f_(b) = x
-_f_(d) = c
+```
+The pattern XYabCaCXZddbW <em>p</em>-matches the 2-offset text substring XYdxCdCXZccxW but does not <em>p</em>-match the 1-offset text substring xXYdxCdCXZccx.
+Notice that when the <em>p</em>-match occurs, the following one-to-one (bijective) function <em>f</em> is used:
+<em>f</em>(a) = d
+<em>f</em>(b) = x
+<em>f</em>(d) = c
+```
