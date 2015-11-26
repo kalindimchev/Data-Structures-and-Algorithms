@@ -53,7 +53,7 @@ xXYdxCdCXZccxW
 <code>
 The pattern XYabCaCXZddbW <em>p</em>-matches the 2-offset text substring XYdxCdCXZccxW but does not <em>p</em>-match the 1-offset text substring xXYdxCdCXZccx.
 Notice that when the <em>p</em>-match occurs, the following one-to-one (bijective) function <em>f</em> is used:
-<em>f</em>(a) = d
-<em>f</em>(b) = x
-<em>f</em>(d) = c
+<br><em>f</em>(a) = d
+<br><em>f</em>(b) = x
+<br><em>f</em>(d) = c
 </code>
