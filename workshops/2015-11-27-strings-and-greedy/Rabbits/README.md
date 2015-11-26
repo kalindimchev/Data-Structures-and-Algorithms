@@ -3,6 +3,8 @@
 ## Description
 Cat Sid visited a town of rabits and asked **some of the rabbits** the following question: *"How many rabbits in this town other than yourself have the same color as you?"*. The rabbits all replied truthfully, and no rabbits was asked the question more than once.
 
+![Test 1 Explanation](Images/Test1Explanation.png)
+
 You are given the rabbits' replies on the first console line.
 
 Write a program to find the minimum possible number of rabbits in this town.
@@ -27,8 +29,6 @@ Print the minimum possible number of rabbits in this town.
 
 | Input                     | Output | Description                                      |
 | ------------------------- | ------ | ------------------------------------------------ |
-| `1 1 2 2 -1`              | `5`    | If there are 2 rabbits with a color and 3 rabbits with another color, Pochi can get this set of replies. See the image below. |
+| `1 1 2 2 -1`              | `5`    | If there are 2 rabbits with a color and 3 rabbits with another color, Pochi can get this set of replies. See the image above. |
 | `0 -1`                    | `1`    | A poor lonely rabbit. |
 | `2 2 44 2 2 2 444 2 2 -1` | `499`  |  |
-
-![Test 1 Explanation](Images/Test1Explanation.png)
