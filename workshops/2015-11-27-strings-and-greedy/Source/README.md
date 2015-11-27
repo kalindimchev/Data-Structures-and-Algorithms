@@ -30,7 +30,7 @@ Given a text **T** and a pattern **P**, each a string over **Σ** and **Π**, fi
 ## Constraints
 * 1 <= length(**T**) <= 1 000 000
 * 1 <= length(**P**) <= 10 000
-* Time limit: **0.1 seconds**
+* Time limit: **0.2 seconds**
 * Memory limit: **32 MiB**
 
 ## Examples
