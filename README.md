@@ -12,7 +12,7 @@ Repository for the Data Structures and Algorithms course
 *   Examination
 
 ###   Algorithms complexity
-<!-- 2 hours, Niki -->
+<!-- 2 hours -->
 
 *   Data Structures Overview
     *   Linear Structures, Trees, Hash Tables, Others
@@ -24,7 +24,7 @@ Repository for the Data Structures and Algorithms course
     *   Asymptotic Notation O(g)
 
 ###   Linear data Structures
-<!-- 2 hours, Doncho -->
+<!-- 2 hours -->
 
 *   Lists
     *   Static and Linked Implementation
@@ -37,7 +37,7 @@ Repository for the Data Structures and Algorithms course
     *   The Queue<T> Class
 
 ###   Trees and Tree Traversals
-<!-- 2.5 hours, Doncho -->
+<!-- 2.5 hours -->
 
 *   Tree-like Data Structures
     *   Trees and Related Terminology
@@ -48,8 +48,7 @@ Repository for the Data Structures and Algorithms course
 *   Balanced Trees in .NET
 
 ###   Hash tables
-<!-- 2.5 hours, Doncho -->
-<!-- +1h workshop, Doncho  -->
+<!-- 2.5 hours -->
 
 *   Dictionaries
 *   Hash Tables
@@ -57,7 +56,7 @@ Repository for the Data Structures and Algorithms course
 *   Sets: HashSet<T> and SortedSet<T>
 
 ###   Advanced Data Structures
-<!-- 1.5 hours, Ivo -->
+<!-- 1.5 hours -->
 
 *   Standard .NET Data Structures
 *   Special .NET Collections
@@ -81,7 +80,7 @@ Repository for the Data Structures and Algorithms course
 *   Choosing Proper Data Structure
 
 ###   Recursion
-<!-- 1.5 hours, Evlogi -->
+<!-- 1.5 hours -->
 
 *   What is Recursion?
 *   Recursion with Examples
@@ -94,7 +93,7 @@ Repository for the Data Structures and Algorithms course
 *   Memoization
 
 ###   Sorting Algorithms
-<!-- 1 hour, Evlogi -->
+<!-- 1 hour -->
 
 *   Sorting and classifications
 *   Review of the most popular sorting algorithms:
@@ -105,7 +104,7 @@ Repository for the Data Structures and Algorithms course
 *   Shuffling algorithms
 
 ###   Searching Algorithms
-<!-- 1 hour, Evlogi -->
+<!-- 1 hour -->
 
 *   Searing algorithms
     *   Linear search
@@ -113,7 +112,7 @@ Repository for the Data Structures and Algorithms course
     *   Interpolation search
 
 ###   Combinatorics
-<!-- 2 hours, Ivo -->
+<!-- 2 hours -->
 
 *   Definitions in Combinatorics
 *   Permutations
@@ -123,7 +122,7 @@ Repository for the Data Structures and Algorithms course
 *   Resources
 
 ###   Dynamic Programming
-<!-- 3.5 hours, Doncho -->
+<!-- 3.5 hours -->
 
 *   Minimum and Maximum
 *   Divide-and-Conquer
@@ -134,13 +133,13 @@ Repository for the Data Structures and Algorithms course
     *   Longest common subsequence
 
 ###   Graphs
-<!-- 1.5 hours, Niki  -->
+<!-- 1.5 hours -->
 
 *   Graph Definitions and Terminology
 *   Representing Graphs in C#
 
 ###   Graph Algorithms
-<!-- 2 hours, Niki  -->
+<!-- 2 hours -->
 
 *   Graph Traversal Algorithms
 *   Connectivity
@@ -149,28 +148,18 @@ Repository for the Data Structures and Algorithms course
 *   Prim and Kruskal
 
 ###   Strings and string algorithms
-<!-- unknown, maybe 3 hours,   -->
+<!-- unknown, maybe 3 hours -->
 *   Naive search
 *   Rabin-Karp
 *   Hashing
 *   Knuth-Morris-Pratt
 
 ###   State machines
-<!-- unknown, maybe 1.5 hours,   -->
+<!-- unknown, maybe 1.5 hours -->
 
 ###   Regular expressions
-<!-- unknown, maybe 1 hour,   -->
+<!-- unknown, maybe 1 hour -->
 
 *   Regular Expression Overview
 *   Regex syntax
 *   Using regular expression in C#
-
-
-###  Computational Geometry
-<!-- unknown -->
-*   Convex hull
-*   Vectors
-    *   Line segment intersection
-*   Closest pair of points
-
-###   Problem solving skills
