@@ -91,7 +91,7 @@ put-=42;";
     private static int Solve(string str1, string str2)
     {
       int left = 0;
-      int right = Math.Min(str1.Length, str2.Length);
+      int right = Math.Min(str1.Length, str2.Length) + 1;
       Hash.ComputePowers(Math.Min(str1.Length, str2.Length));
 
       while (left < right)
