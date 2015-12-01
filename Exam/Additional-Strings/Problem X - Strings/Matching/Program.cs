@@ -122,7 +122,7 @@ put-=42;";
       hashes1.Add(hash1.Value1);
       hashes2.Add(hash1.Value2);
 
-      for (int i = 0; i < str1.Length - length - 1; i++)
+      for (int i = 0; i < str1.Length - length; i++)
       {
         hash1.Add(str1[length + i]);
         hash1.Remove(str1[i], length);
@@ -138,7 +138,7 @@ put-=42;";
         return true;
       }
 
-      for (int i = 0; i < str2.Length - length - 1; i++)
+      for (int i = 0; i < str2.Length - length; i++)
       {
         hash2.Add(str2[length + i]);
         hash2.Remove(str2[i], length);
